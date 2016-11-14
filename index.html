@@ -42,64 +42,376 @@
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
 
-        <!--Introduction slide-->
         <section>
-            <h1>Class Name</h1>
-            <h3></h3>
-            <p>
-
-            </p>
-        </section>
-        <!--/Intro Slides-->
-
-        <section>
-            <h2></h2>
-            <pre><code class="hljs" data-trim contenteditable>
-
-            </code></pre>
-            <p>
-                <a href=""></a>
-            </p>
-            <aside class="notes"></aside>
+            <h1>Javascript loops</h1>
         </section>
 
-
-        <!--Slide with list temp-->
         <section>
-            <h2></h2>
+            <h2>Introduction to Loops</h2>
+            <p class="fragment">Loops are a concept that is fundamental to computer science.</p>
+            <p class="fragment">They provide a way to repeat the same set of actions over and over again. These actions can repeat a certain number of times, or until a certain condition is met.</p>
+        </section>
+
+        <section>
+            <h2>Introduction to Loops</h2>
+            <p class="fragment">For example, you would use loops when creating a list of 100 random numbers, displaying 20 photos downloaded from a photo sharing website like Flickr, or repeatedly popping up a prompt dialog until a visitor correctly enters an answer to a quiz question.</p>
+            <p class="fragment">Race track example</p>
+        </section>
+
+        <section>
+            <h2>Loops</h2>
+            <p>There are many different ways to create loops in JavaScript (and other programming languages).</p>
+            <p>We will be focusing on “while” and “for” loops.</p>
+            <img src="images/coaster.png" alt="">
+        </section>
+
+        <section>
+            <h2>Reviewing Conditionals</h2>
+            <p>A while statement repeats a section of code over and over again as long as some condition is true.</p>
+            <p>Remember conditional statements (aka if/else)?</p>
+            <p>A basic conditional statement looks like this:</p>
+<pre class="fragment"><code class="js" data-trim contenteditable> 
+if ( condition ) {
+    //code that runs if condition is true
+}
+else {
+    //code that runs if condition is false
+}
+</code></pre>
+            <p class="fragment">Inside the parentheses goes a condition. If the condition is true, then the code inside the code block runs.</p>
+        </section>
+
+        <section>
+            <h2>Reviewing Conditionals</h2>
+            <p class="fragment">Conditional statement example: </p>
+ <pre class="fragment"><code class="js" data-trim contenteditable>            
+if (name === "Jeremy") {
+    alert("Hey, I know you!");
+else {
+    alert("Who are you?");
+}
+</code></pre>
+            <p class="fragment">‘While’ loops are very similar!</p>
+        </section>
+
+        <section>
+            <h2>While Loops Syntax</h2>
+ <pre class="fragment"><code class="js" data-trim contenteditable>                 
+while (a condition) {
+    //code goes here that runs if and while it is true
+}
+</code></pre>
+            <p class="fragment">A condition also goes inside this set of parenthesis but instead of the code inside the block only running once when the condition is true, it runs over and over, and over again as long as the condition is true.</p>
+            <p class="fragment">No semicolon after the final brace (because the code will be repeating!)</p>
+        </section>
+
+        <section>
+            <h2>Horse Race Example</h2>
+            <p>We want the horses to go around the track 10 times and log it each time they pass the counter. </p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                     
+var counter = 0;
+while (counter < 10) {
+    counter += 1;
+    document.write(counter);
+}
+</code></pre>
+            <p class="fragment">We can easily make counter < 1,000!</p>
+        </section>
+
+        <section>
+            <h2>Loops</h2>
+            <p>What’s the difference between a while loop and a conditional statement?</p>
+            <p class="fragment">IF music plays, I will do a dance. AND <br> WHILE music is playing, I will continue dancing.</p>
+            <img class="fragment" src="https://media.tenor.co/images/a6392f519c8e01fa9c44fe25b171038e/raw" alt="">
+        </section>
+
+        <section>
+            <h2>What's wrong with this loop?</h2>
+ <pre class="fragment"><code class="js" data-trim contenteditable>                                
+var num = 0;
+while (num > 20 ) {
+  alert(num);
+  num += 1;
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>JSBin</h2>
+            <p>You will create a while loop that prints to the document 26 times. Create a variable named count, use it to track the number of times the loop runs. Don't forget to use the document.write() method inside the loop.</p>
+        </section>
+
+        <section>
+            <h2>Important Notes</h2>
+            <p>You don't always need to use a counter or specify an exact number of times that a loop must run.</p>
+            <p class="fragment">All you need is a condition that at some point evaluates to false, so the loop can end.</p>
+        </section>
+
+        <section>
+            <h2>Important Notes</h2>
+            <p class="fragment">The condition is evaluated BEFORE the loop. That means, if the condition is not true at the beginning, the loop will never run. </p>
+            <p class="fragment"><span style="color: red">You always need a way to break OUT of the loop (aka, the condition needs to be false at some point)</span>. Something has to change inside of the loop to stop it from running. Otherwise, you will be stuck in an endless loop and your browser can crash.</p>
+        </section>
+
+        <section>
+            <h2>Hacking</h2>
+            <p style="font-size: 20px;">Say you are a code breaker and you want your computer to guess the random number between 1 and 10000 that another computer is generating.</p>
             <ul>
-                <li class="fragment"><a href="" target="_blank"></a></li>
-                <li class="fragment"></li>
+                <li class="fragment">First, we need to generate a random number from 1 to 10000. This is the number the computer needs to guess.</li>
+                <li class="fragment">Two, we'll enter a while loop that the computer will use to guess the random number.</li>
+                <li class="fragment">If the number the computer guesses matches the number generated at the beginning of the program, then the loop ends.</li>
+                <li class="fragment">If not, the loop continues until the correct number is guessed by the computer. (At which point, we exit the loop and print the random number and the number of times it took the computer to guess it.)</li>
             </ul>
-            <p>
-                <a href=""></a>
-            </p>
-            <aside class="notes"></aside>
         </section>
 
-        <!--<section>-->
-            <!--<h2>Clever Quotes</h2>-->
-            <!--<p>-->
-                <!--These guys come in two forms, inline: <q-->
-                    <!--cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">-->
-                <!--&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:-->
-            <!--</p>-->
-            <!--<blockquote-->
-                    <!--cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">-->
-                <!--&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of-->
-                <!--typewriters would-->
-                <!--reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;-->
-            <!--</blockquote>-->
-        <!--</section>-->
+        <section>
+            <h2>Hacking Part 2</h2>
+            <p>The code we want to write opens a prompt, asks for a password, and writes to the document. Something is missing. Add a while loop, so that a prompt keeps appearing until the user types "sesame" into the prompt.</p>
+ <pre class="fragment"><code class="js" data-trim contenteditable>                                 
+var secret = prompt("What is the secret password?”);
+    //Your code here
+document.write("You know the secret password. Welcome.");
+</code></pre>
+        </section>
 
+        <section>
+            <h2>The Do While Loop</h2>
+            <p class="fragment"> This loop is very similar to the while loop. It executes the code in the code block over and over again as long as the condition is true. </p>
+            <p class="fragment">The one key difference is that the do while loop will always execute the code block at least once. The condition isn’t tested until after the code block runs once.</p>
+            <img class="fragment" src="images/dowhile.png" alt="">
+        </section>
 
-        <!--You can link between slides internally,-->
-        <!--<a href="#/2/3">like this</a>.-->
+        <section>
+            <h2>Do While</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                
+do { 
+    //code block
+} while ( the condition ) 
+</code></pre>
+            <p class="fragment">Example:</p>
+            <p class="fragment">You pop open a prompt dialog and ask for a user's email address. If the user types “haha, I'm not gonna tell you”, you might want to pop open the prompt a second time and ask for the email address. In fact, you might want to pop open that prompt over and over again until the user types in a valid email address. </p>
+            <p class="fragment">In other words, you want to run a loop at least once to ask for a response but maybe more times as well, until the correct answer is supplied.</p>
+        </section>
 
+        <section>
+            <h2>Example</h2>
+            <p>Given the code below, what will print out to the console? </p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+do {
+  console.log('Hello');
+} while (false) 
+console.log(‘Goodbye’);
+</code></pre>
+        </section>
 
-        <section style="text-align: left;">
-            <h1>THE END</h1>
-            <p>Thank you for your attention!</p>
+        <section>
+            <h2>White Board Challenge</h2>
+            <p>How would we change the following code to have a do while loop instead of a while loop?</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+var secret = prompt("What is the secret password?");
+while ( secret !== "sesame" ) {
+  secret = prompt("What is the secret password?");    
+}
+document.write("You know the secret password. Welcome.");
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Explain this code</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+var maxNumber = 10000;
+var numberToGuess = getRandomNumber(maxNumber);
+var ourGuess;
+var attempts = 0;
+function getRandomNumber(maxNumber) {
+  return Math.floor(Math.random() * maxNumber) + 1; }
+while (ourGuess !== numberToGuess) {
+    ourGuess = getRandomNumber(maxNumber);
+    attempts += 1; }
+document.write("&lt;p&gt;The random number was " + numberToGuess + 
+". It took the computer " + attempts + " tries to get it right.&lt;/p&gt;");
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Exercises</h2>
+            <p>1. Use a while loop to add up the numbers 1 to 20. Console log the total.</p>
+            <p>2. Use a while loop to print out the even number from 1 to 20. </p>
+        </section>
+
+        <section>
+            <h2>Song Exercise</h2>
+            <p>Hint: Be mindful of infinite loops. They will crash your browser!</p>
+            <ul>
+                <li>Ask the user how many verses they want to hear.</li>
+                <li>Write code that console logs the "Bottles of Sprite on the wall" song:</li>
+                <p style="text-align: center; color: yellow">10 bottles of Sprite on the wall,<br>10 bottles of Sprite! <br> Take one down and pass it around, <br> 9 bottles of Sprite on the wall!</p>
+                <li>How would you fix "1 bottles of Sprite"?</li>
+                <li>How would you change "0" to "No more"?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>For loops</h1>
+            <p>Your new best friend</p>
+        </section>
+
+        <section>
+            <h2>Intro to for loops</h2>
+            <ul>
+                <li class="fragment">For loops are the most popular type of loop in JavaScript.</li>
+                <li class="fragment">For loops are frequently used for actions that need to run a particular number of times.</li>
+                <li class="fragment">For loops are also a common way to work with arrays, which are lists of data.</li>
+                <li class="fragment">You'll use for loops frequently to look through all of the items in an array one at a time.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>How do for loops work?</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+for ([initialization]; [condition]; [final-expression]) {
+ 	//...do something...
+}
+</code></pre>
+            <p class="fragment">DECLARATION and INITIALIZATION is checked before the loop runs.</p>
+            <p class="fragment">The loop will only run if the condition is evaluated to true.</p>
+            <p class="fragment">The FINAL EXPRESSION is what is done to the counter after each time the code block is run.</p>
+            <p class="fragment">The code block (everything in the curly braces) is what runs each time the loop is activated (just like while loops!).</p>
+        </section>
+
+        <section>
+            <h2>For loops</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+for (var i = 0; i <= 10; i++){
+    //....do something...
+};
+</code></pre>
+            <p class="fragment">To simplify writing this code, we use a variable to represent counter each time we use a for loop. We just use the letter “i”!</p>
+            <p class="fragment">Don’t let the “i”s weird you out, they are just like giving the variable any other name.</p>
+        </section>
+
+        <section>
+            <h2>Counting from 0 to 10</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+// start from 0
+// check if our count is 10 yet
+// if not count it (add one)  
+for (var i = 0; i <= 10 ; i++){
+    console.log(i);
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Count from 10 to 0</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+for (var i = 10; i >= 0 ; i--){
+	console.log(i);
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2> While Loop vs For loop</h2>
+            <p>While Loops</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+var counter = 10;
+while (counter < 10) {
+    document.write(counter);
+    counter += 1;
+}
+</code></pre>
+            <p class="fragment">For loops</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+for (var counter= 0; counter < 10; counter +=1) {
+    document.write(counter);
+}
+</code></pre>
+            <p class="fragment">Fewer lines of code!</p>
+        </section>
+
+        <section>
+            <h2>Quick challenge</h2>
+            <p>Create a for loop that logs the numbers 4 to 156 to the console. To log a value to the console use the console.log( ) method.</p>
+        </section>
+
+        <section>
+            <h2>The REcipe Card</h2>
+            <p>Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).</p>
+            <p class="fragment">On separate lines (one console.log statement for each), log the recipe information so it looks like: </p>
+            <img src="" alt="">
+        </section>
+
+        <section>
+            <h2>Objects Review</h2>
+            <ul>
+                <li class="fragment">An object in JavaScript is a self-contained see of related values and functions.</li>
+                <li class="fragment">It is a great way to keep data and functions about one item (or object) together.</li>
+                <li class="fragment">An object literal is an object that is created directly in the language by wrapping all of its properties and methods in curly braces. (It’s the one we learned. The other type of object is object constructor— don’t worry about that now!)</li>
+                <li class="fragment">Objects contain key/value pairs. </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Example of Object Literal</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+var superman = {
+    name: “Superman”,
+    fakeName: “Clark Kent”,
+    height: 6.4,
+    weight: 215,
+    hero: true,
+    allies: [“Superwoman”, “Batman”, “Wolverine”],
+    fly: function() {
+        return “Up, up, and away!”;
+        }
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>For loops with objects</h2>
+            <p>We can loop through all of an object’s keys and values by using a for in loop (this is specific to objects). </p>
+            <p>We can create a variable “key” . This is then used to represent the name of each key in the superman object in the for loop.</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+for (var key in superman) {
+    console.log(key + “: ” + superman[key]); 
+}
+</code></pre>
+            <p>This will log to the console all of the data in our superman object.</p>
+        </section>
+
+        <section>
+            <h2>Quick Exercise</h2>
+            <ul>
+                <li>Create an array called favoriteFood and add 6 items to the array.</li>
+                <li>Create a function called printFoods that passes the argument “lists” through it.</li>
+                <li>Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.</li>
+                <li>Call the function with the favoriteFood array.</li>
+            </ul>
+        </section>
+
+         <section>
+            <h2>The Reading List</h2>
+            <p class="fragment">Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).</p>
+            <p class="fragment">Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien".</p>
+            <p class="fragment">Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'</p>
+        </section>
+
+        <section>
+            <h2>The Movie Database</h2>
+            <p class="fragment">Create an object to store the following information about your favorite movie: title (a string), duration (a number), and stars (an array of strings).</p>
+            <p class="fragment">Create a function to print out the movie information like so: "Puff the Magic Dragon lasts for 30 minutes. Stars: Puff, Jackie, Living Sneezes."</p>
+        </section>
+
+        <section>   
+            <h2>In-class Exercise</h2>
+            <a href="http://codepen.io/jlehman/pen/RrMBOv?editors=0010">Code Pen</a>
+        </section>
+
+        <section>
+            <h1>The End</h1>
+            <p>Thanks for your attention</p>
         </section>
 
     </div>
