@@ -154,6 +154,12 @@ while (num > 20 ) {
         </section>
 
         <section>
+            <h2>Exercises</h2>
+            <p>1. Use a while loop to add up the numbers 1 to 20. Console log the total.</p>
+            <p>2. Use a while loop to print out the even number from 1 to 20. </p>
+        </section>
+
+        <section>
             <h2>Hacking</h2>
             <p style="font-size: 20px;">Say you are a code breaker and you want your computer to guess the random number between 1 and 10000 that another computer is generating.</p>
             <ul>
@@ -167,8 +173,7 @@ while (num > 20 ) {
         <section>
             <h2>Hacking Part 2</h2>
             <p>The code we want to write opens a prompt, asks for a password, and writes to the document. Something is missing. Add a while loop, so that a prompt keeps appearing until the user types "sesame" into the prompt.</p>
- <pre class="fragment"><code class="js" data-trim contenteditable>                                 
-var secret = prompt("What is the secret password?”);
+ <pre class="fragment"><code class="js" data-trim contenteditable>          var secret = prompt("What is the secret password?");
     //Your code here
 document.write("You know the secret password. Welcome.");
 </code></pre>
@@ -196,7 +201,7 @@ do {
         <section>
             <h2>Example</h2>
             <p>Given the code below, what will print out to the console? </p>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+<pre class="fragment"><code class="js" data-trim contenteditable>             
 do {
   console.log('Hello');
 } while (false) 
@@ -207,8 +212,7 @@ console.log(‘Goodbye’);
         <section>
             <h2>White Board Challenge</h2>
             <p>How would we change the following code to have a do while loop instead of a while loop?</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-var secret = prompt("What is the secret password?");
+<pre class="fragment"><code class="js" data-trim contenteditable>             var secret = prompt("What is the secret password?");
 while ( secret !== "sesame" ) {
   secret = prompt("What is the secret password?");    
 }
@@ -218,8 +222,7 @@ document.write("You know the secret password. Welcome.");
 
         <section>
             <h2>Explain this code</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-var maxNumber = 10000;
+<pre class="fragment"><code class="js" data-trim contenteditable>             var maxNumber = 10000;
 var numberToGuess = getRandomNumber(maxNumber);
 var ourGuess;
 var attempts = 0;
@@ -231,12 +234,6 @@ while (ourGuess !== numberToGuess) {
 document.write("&lt;p&gt;The random number was " + numberToGuess + 
 ". It took the computer " + attempts + " tries to get it right.&lt;/p&gt;");
 </code></pre>
-        </section>
-
-        <section>
-            <h2>Exercises</h2>
-            <p>1. Use a while loop to add up the numbers 1 to 20. Console log the total.</p>
-            <p>2. Use a while loop to print out the even number from 1 to 20. </p>
         </section>
 
         <section>
@@ -281,7 +278,7 @@ for ([initialization]; [condition]; [final-expression]) {
 
         <section>
             <h2>For loops</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+<pre class="fragment"><code class="js" data-trim contenteditable>             
 for (var i = 0; i <= 10; i++){
     //....do something...
 };
@@ -292,7 +289,7 @@ for (var i = 0; i <= 10; i++){
 
         <section>
             <h2>Counting from 0 to 10</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+<pre class="fragment"><code class="js" data-trim contenteditable>             
 // start from 0
 // check if our count is 10 yet
 // if not count it (add one)  
@@ -304,8 +301,7 @@ for (var i = 0; i <= 10 ; i++){
 
         <section>
             <h2>Count from 10 to 0</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-for (var i = 10; i >= 0 ; i--){
+<pre class="fragment"><code class="js" data-trim contenteditable>             for (var i = 10; i >= 0 ; i--){
 	console.log(i);
 }
 </code></pre>
@@ -314,16 +310,14 @@ for (var i = 10; i >= 0 ; i--){
         <section>
             <h2> While Loop vs For loop</h2>
             <p>While Loops</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-var counter = 10;
+<pre class="fragment"><code class="js" data-trim contenteditable>           var counter = 10;
 while (counter < 10) {
     document.write(counter);
     counter += 1;
 }
 </code></pre>
             <p class="fragment">For loops</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-for (var counter= 0; counter < 10; counter +=1) {
+<pre class="fragment"><code class="js" data-trim contenteditable>            for (var counter= 0; counter < 10; counter +=1) {
     document.write(counter);
 }
 </code></pre>
@@ -339,7 +333,23 @@ for (var counter= 0; counter < 10; counter +=1) {
             <h2>The REcipe Card</h2>
             <p>Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).</p>
             <p class="fragment">On separate lines (one console.log statement for each), log the recipe information so it looks like: </p>
-            <img src="" alt="">
+            <img class="fragment" src="images/recipe1.png" alt="">
+        </section>
+
+        <section>
+            <h2>Arrays and Loops</h2>
+            <p>Find all of the even numbers from 0-100 and add them to an array called “even”.</p>
+            <p>Find all the numbers divisible by 8 in "even" and add it to a different array called “myEights”.</p>
+        </section>
+
+        <section>
+            <h2>Arrays and Loops</h2>
+            <ul>
+                <li>Create an array called favoriteFood and add 6 items to the array.</li>
+                <li>Create a function called printFoods that passes the argument “lists” through it.</li>
+                <li>Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.</li>
+                <li>Call the function with the favoriteFood array.</li>
+            </ul>
         </section>
 
         <section>
@@ -354,41 +364,65 @@ for (var counter= 0; counter < 10; counter +=1) {
 
         <section>
             <h2>Example of Object Literal</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-var superman = {
-    name: “Superman”,
-    fakeName: “Clark Kent”,
+<pre class="fragment"><code class="js" data-trim contenteditable>             var superman = {
+    name: "Superman",
+    fakeName: "Clark Kent",
     height: 6.4,
     weight: 215,
     hero: true,
-    allies: [“Superwoman”, “Batman”, “Wolverine”],
+    allies: ["Superwoman", "Batman", "Wolverine"],
     fly: function() {
-        return “Up, up, and away!”;
+        return "Up, up, and away!";
         }
 }
 </code></pre>
         </section>
 
         <section>
+            <h2>Adding Items to Objects</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable> 
+var coach = {
+  favFood: ["cords","sticks", "penguins"],
+  owner: {name:"Jessica", age: 32, city: "SF"}
+};
+coach.favFood.push("chicken");
+console.log(coach.favFood);
+coach.owner.hairColor = "bronze";
+function hair() {
+  console.log(coach.owner.hairColor);
+}
+hair();
+</code></pre>           
+        </section>
+
+        <section>
             <h2>For loops with objects</h2>
             <p>We can loop through all of an object’s keys and values by using a for in loop (this is specific to objects). </p>
-            <p>We can create a variable “key” . This is then used to represent the name of each key in the superman object in the for loop.</p>
+            <p class="fragment">We can create a variable “key” . This is then used to represent the name of each key in the superman object in the for loop.</p>
 <pre class="fragment"><code class="js" data-trim contenteditable>                                   
 for (var key in superman) {
     console.log(key + “: ” + superman[key]); 
 }
 </code></pre>
-            <p>This will log to the console all of the data in our superman object.</p>
+            <p class="fragment">This will log to the console all of the data in our superman object.</p>
         </section>
 
         <section>
-            <h2>Quick Exercise</h2>
-            <ul>
-                <li>Create an array called favoriteFood and add 6 items to the array.</li>
-                <li>Create a function called printFoods that passes the argument “lists” through it.</li>
-                <li>Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.</li>
-                <li>Call the function with the favoriteFood array.</li>
-            </ul>
+            <h2>Object Iterating Exercise</h2>
+            <p>Given an object:</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>      
+var class = { 
+    lovely: "orange",
+    hptrust: "red",
+    drjules: "purple",
+    sparkle: "yellow",
+    infinite: "blue",
+    missmorpheus: "silver",
+    ubuspeaks: "green",
+    taiyz: "pink"
+}
+</code></pre>
+            <p class="fragment">Find all of the pink values and return an array of the names with pink value.</p>
         </section>
 
          <section>
@@ -405,8 +439,8 @@ for (var key in superman) {
         </section>
 
         <section>   
-            <h2>In-class Exercise</h2>
-            <a href="http://codepen.io/jlehman/pen/RrMBOv?editors=0010">Code Pen</a>
+            <h2>In-class Review Exercise</h2>
+            <p style="color:yellow">JSFile</p>
         </section>
 
         <section>
