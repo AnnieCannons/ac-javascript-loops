@@ -156,7 +156,23 @@ while (num > 20 ) {
         <section>
             <h2>Exercises</h2>
             <p>1. Use a while loop to add up the numbers 1 to 20. Console log the total.</p>
-            <p>2. Use a while loop to print out the even number from 1 to 20. </p>
+            <p>2. Use a while loop to print out the even numbers from 1 to 20. </p>
+            <aside class="notes">
+                <p>var counter = 0;<br>
+                var sum = 0; 
+                while (counter < 20) { <br>
+                counter += 1; <br>
+                sum += counter;<br>
+                } <br>
+                console.log(sum);</p>
+                <p>var counter = 0;<br>
+                while (counter < 20){ <br>  
+                counter +=1; <br>
+                if (counter % 2 ===0){ <br>
+                console.log(counter); <br>
+                } <br>
+                }</p>
+            </aside>
         </section>
 
         <section>
@@ -168,15 +184,33 @@ while (num > 20 ) {
                 <li class="fragment">If the number the computer guesses matches the number generated at the beginning of the program, then the loop ends.</li>
                 <li class="fragment">If not, the loop continues until the correct number is guessed by the computer. (At which point, we exit the loop and print the random number and the number of times it took the computer to guess it.)</li>
             </ul>
+            <aside class="notes">
+                <p>var randomNumber = Math.floor(Math.random() * 10000) + 1; <br>
+                var counter = 0; <br>
+                while (randomNumber !== ourGuess) { <br>
+                var ourGuess = Math.floor(Math.random() * 10000) + 1; <br>
+                counter++; <br>
+                } <br>  
+                console.log(ourGuess); <br>
+                console.log(counter);</p>
+            </aside>
         </section>
 
         <section>
             <h2>Hacking Part 2</h2>
             <p>The code we want to write opens a prompt, asks for a password, and writes to the document. Something is missing. Add a while loop, so that a prompt keeps appearing until the user types "sesame" into the prompt.</p>
- <pre class="fragment"><code class="js" data-trim contenteditable>          var secret = prompt("What is the secret password?");
+<pre class="fragment"><code class="js" data-trim contenteditable>          
+var secret = prompt("What is the secret password?");
     //Your code here
 document.write("You know the secret password. Welcome.");
 </code></pre>
+        <aside class="notes"> 
+        <p> var secret = prompt("What is the secret password?"); <br>
+        while (secret.toLowerCase() !== "sesame"){ <br>
+        secret = prompt("Try again"); <br>
+        } <br>
+        document.write("You know the secret password. Welcome.");</p>
+        </aside>
         </section>
 
         <section>
@@ -207,22 +241,32 @@ do {
 } while (false) 
 console.log(‘Goodbye’);
 </code></pre>
+        <aside class="notes">"Hello"</aside>
         </section>
 
         <section>
             <h2>White Board Challenge</h2>
             <p>How would we change the following code to have a do while loop instead of a while loop?</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>             var secret = prompt("What is the secret password?");
+<pre class="fragment"><code class="js" data-trim contenteditable>             
+var secret = prompt("What is the secret password?");
 while ( secret !== "sesame" ) {
   secret = prompt("What is the secret password?");    
 }
 document.write("You know the secret password. Welcome.");
 </code></pre>
+        <aside class="notes">
+            <p> do { <br>
+            var secret = prompt("What is the secret password?"); <br>
+            } while ( secret !== "sesame" ) <br>
+            document.write("You know the secret password. Welcome.");
+            </p>
+        </aside>
         </section>
 
         <section>
             <h2>Explain this code</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>             var maxNumber = 10000;
+<pre class="fragment"><code class="js" data-trim contenteditable>             
+var maxNumber = 10000;
 var numberToGuess = getRandomNumber(maxNumber);
 var ourGuess;
 var attempts = 0;
@@ -246,6 +290,14 @@ document.write("&lt;p&gt;The random number was " + numberToGuess +
                 <li>How would you fix "1 bottles of Sprite"?</li>
                 <li>How would you change "0" to "No more"?</li>
             </ul>
+            <aside class="notes">
+                <p>var verses = prompt("How many verses do you want to hear?"); <br>
+                while (verses > 0){ <br>
+                console.log(verses+ " bottles of Sprite on the wall, " + verses + " bottles of Sprite! Take one down and pass it around, " + (verses - 1) + " bottles of Sprite on the wall!"); <br>
+                verses--; <br>
+                }
+                </p>
+            </aside>
         </section>
 
         <section>
