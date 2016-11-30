@@ -295,7 +295,17 @@ document.write("&lt;p&gt;The random number was " + numberToGuess +
                 while (verses > 0){ <br>
                 console.log(verses+ " bottles of Sprite on the wall, " + verses + " bottles of Sprite! Take one down and pass it around, " + (verses - 1) + " bottles of Sprite on the wall!"); <br>
                 verses--; <br>
-                }
+                } <br>
+                Challenge: <br>
+                var verses = prompt("How many verses would you like to hear?"); <br>
+                while (verses > 0){ <br>
+                if (verses === 1) { <br>
+                    console.log(verses + " bottle of Sprite on the wall, " + verses + " bottle of Sprite! Take one down and pass it around, no more bottles of Sprite on the wall!"); <br>
+                } else { <br>
+                console.log(verses + " bottles of Sprite on the wall, " + verses + " bottles of Sprite! Take one down and pass it around, " + (verses - 1) + " bottles of Sprite on the wall!"); <br>
+                    } <br>
+                verses = verses - 1; <br>
+                } 
                 </p>
             </aside>
         </section>
@@ -379,19 +389,52 @@ while (counter < 10) {
         <section>
             <h2>Quick challenge</h2>
             <p>Create a for loop that logs the numbers 4 to 156 to the console. To log a value to the console use the console.log( ) method.</p>
+            <aside class="notes">
+                for (var i = 0; i <= 156; i++) {
+                    console.log(i);
+                }
+            </aside>
         </section>
 
         <section>
-            <h2>The REcipe Card</h2>
+            <h2>The Recipe Card</h2>
             <p>Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).</p>
             <p class="fragment">On separate lines (one console.log statement for each), log the recipe information so it looks like: </p>
             <img class="fragment" src="images/recipe1.png" alt="">
+            <aside class="notes">
+                <p>var macandcheese = { <br>
+                    name: "Mac and Cheese", <br>
+                    servings: 10, <br>
+                    ingredients: ["pasta", "milk", "cheese", "cumin", "more cheese"] <br>
+                    }; <br>
+
+                console.log(macandcheese.name); <br>
+                console.log(macandcheese.servings); <br>
+                for (var i = 0; i < macandcheese.ingredients.length; i++){ <br> 
+                    console.log(macandcheese.ingredients[i]); <br>
+                }</p>
+            </aside>
         </section>
 
         <section>
             <h2>Arrays and Loops</h2>
             <p>Find all of the even numbers from 0-100 and add them to an array called “even”.</p>
             <p>Find all the numbers divisible by 8 in "even" and add it to a different array called “myEights”.</p>
+            <aside class="notes">
+                <p>var even = []; <br>
+                for (var i = 0; i <= 100; i = i + 2){ <br>
+                even.push(i); <br>
+                } <br>
+                console.log(even); <br>
+
+                var myEights = []; <br>
+                for (var  i = 0; i < even.length; i++){ <br>
+                if (even[i] % 8 === 0){ <br>
+                    myEights.push(even[i]); <br>
+                } <br>
+                } <br>
+                console.log(myEights);</p>
+            </aside>
         </section>
 
         <section>
@@ -402,6 +445,17 @@ while (counter < 10) {
                 <li>Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.</li>
                 <li>Call the function with the favoriteFood array.</li>
             </ul>
+            <aside class="notes">
+                <p>var favoriteFood = ["Mac and Cheese", "Hot Cheetos", "Popcorn Shrimp", "Steak", "Cheesecake", "Gumbo"]; <br>
+                var coachFavorite = ["bones", "plastic", "steak", "dirt"]; <br>
+                function printFoods(lists){ <br>
+                for (var i = 0; i < lists.length; i++){ <br>   
+                    console.log("My number " + (i + 1) + " favorite food is " + lists[i]); <br>
+                } <br>
+                } <br>
+                printFoods(favoriteFood); <br>
+                printFoods(coachFavorite);</p>
+            </aside>
         </section>
 
         <section>
