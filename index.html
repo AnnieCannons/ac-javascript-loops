@@ -470,7 +470,8 @@ while (counter < 10) {
 
         <section>
             <h2>Example of Object Literal</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>             var superman = {
+<pre class="fragment"><code class="js" data-trim contenteditable>             
+var superman = {
     name: "Superman",
     fakeName: "Clark Kent",
     height: 6.4,
@@ -479,7 +480,7 @@ while (counter < 10) {
     allies: ["Superwoman", "Batman", "Wolverine"],
     fly: function() {
         return "Up, up, and away!";
-        }
+    }
 }
 </code></pre>
         </section>
@@ -529,6 +530,15 @@ var class = {
 }
 </code></pre>
             <p class="fragment">Find all of the pink values and return an array of the names with pink value.</p>
+            <aside class="notes">
+var pinkNames = [];
+for (var key in acClass) {
+  if (acClass[key] === "pink"){
+    pinkNames.push(key);
+  }
+}
+console.log(pinkNames);
+            </aside>
         </section>
 
          <section>
@@ -536,12 +546,45 @@ var class = {
             <p class="fragment">Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).</p>
             <p class="fragment">Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien".</p>
             <p class="fragment">Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'</p>
+            <aside class="notes">
+for (var i = 0; i < bookList.length; i++){
+    console.log(bookList[i].title + " by " + bookList[i].author);
+}
+
+for (var i = 0; i < bookList.length; i++){
+  if (bookList[i].alreadyRead === true){
+    console.log("You already read " + bookList[i].title + " by " + bookList[i].author);
+  } else {
+    console.log("You still need to read " + bookList[i].title + " by " + bookList[i].author);
+  }
+} 
+            </aside>
         </section>
 
         <section>
             <h2>The Movie Database</h2>
             <p class="fragment">Create an object to store the following information about your favorite movie: title (a string), duration (a number), and stars (an array of strings).</p>
             <p class="fragment">Create a function to print out the movie information like so: "Puff the Magic Dragon lasts for 30 minutes. Stars: Puff, Jackie, Living Sneezes."</p>
+            <aside class="notes">
+var interstellar = {
+  title: "Interstellar",
+  duration: 169,
+  stars: ["Matthew M", " Jessica Chastain", " Anne Hathaway", " Matt Damon", " Michael Caine"]
+};
+
+var titanic = {
+  title: "Titanic",
+  duration: "hella",
+  stars: [" Leo", " Kate", " Other people who die"]
+};
+
+function printMovie(movieObject){
+  console.log(movieObject.title + " lasts for " + movieObject.duration + " minutes. Stars: " + movieObject.stars);
+}
+
+printMovie(interstellar);
+printMovie(titanic);       
+            </aside>
         </section>
 
         <section>   
