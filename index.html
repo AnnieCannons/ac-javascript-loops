@@ -43,8 +43,460 @@
     <div class="slides">
 
         <section>
-            <h1>Javascript loops</h1>
+            <h2>JavaScript conditional statements and loops</h2>
         </section>
+
+        <section>
+            <h2>What do our program need?</h2>
+            <p class="fragment">1. Ways to see if the program is working under certain conditions</p>
+            <p class="fragment">2. Ways to make our programs responsive to the user</p>
+            <img class="fragment" src="images/puppy.gif" alt="Happy Puppy">
+        </section>
+
+        <section>   
+            <h2>Conditional Statements</h2>
+            <p class="fragment">Conditionals allow you to use a users input to change the results of a program or statement.</p>
+            <p class="fragment">All conditions, no matter how complex, can and must be broken down to yes or no, true or false.</p>
+            <p class="fragment">Example: If your user destroys all 10 alien spaceships in your game, your program will allow them to move on to the next level.</p>
+        </section>
+
+        <section>
+            <h2>In pictures</h2>
+            <img src="images/if-statement.png" alt="Control Flow">
+        </section>
+
+        <section>
+            <h2>Conditional Statements</h2>
+            <p>A very simple conditional statement: (the one we will start with) is <span style="color:yellow">If something is true, then do this</span>. </p> 
+<pre><code class="js" data-trim contenteditable>
+if ( the condition ) {
+//the code that runs if the condition is true, called a code block
+}   
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Note!</h2>
+            <p>There is no semi-colon at the end of the statement.</p>
+        </section>
+
+        <section>
+            <h2>The if statement</h2>
+            <p>Use <code>if</code> to tell JS which statements to execute, based on a condition.</p>
+<pre><code class="js" data-trim contenteditable>
+var x = 5;
+
+if (x > 0) {
+  console.log('x is a positive number!');
+}
+</code></pre>
+            <p>An 'if' statement tests a condition to see if it is true. If the condition is true, the code inside the 'if' statement is run. Since the value of 'x' is 5, and 5 is greater than 0, the condition is evaluated as true and the code inside our 'if' statement is executed. </p>
+     </section>
+
+     <section>
+          <h2>The if and else statements</h2>
+          <img src="images/diagram.png" alt="If/Else Control Flow">
+     </section>
+
+     <section>
+         <h2>in pictures</h2>
+         <img src="images/if-else.png" alt="If/Else with print statement">
+     </section>
+
+     <section>
+         <h2>The if and else statements</h2>
+         <p>Example:</p>
+<pre><code class="js" data-trim contenteditable>            
+var answer = prompt("What programming language is the name of a gem?");
+if ( answer === "Ruby" ) {
+    alert("Correct!");
+}
+//If you want an option for if the person gets it wrong
+else {
+    alert("That’s not right!");
+}
+//only one message will appear 
+</code></pre>
+     </section>
+
+     <section>
+         <h2>Why so many equal signs?</h2>
+         <p>Three equal signs is an equality operator. </p>
+         <p>It's used to test if two values are exactly the same. If they are the same, then the condition is true and the code inside the braces runs.</p>
+     </section>
+    
+    <section>
+        <h2>Exact equivalence</h2>
+        <p>In the earlier JavaScript we wrote, write “ruby” instead of “Ruby”. Do you get the right answer?</p>
+        <p class="fragment">A solution</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>         
+if ( answer.toUpperCase() === "RUBY" ) {
+    alert("Correct!");
+}
+</code></pre>
+        <p class="fragment">This will make the answer that your user gives correct, no matter the case!</p>
+    </section>
+
+    <section>   
+        <h2>Exercise</h2>
+        <ul>
+            <li>Create a variable called favoriteFood and give it the value of prompt(“What is your favorite food?”).</li>
+            <li>Create a conditional statement so that if the user answers your favorite food, they get an alert that says “Mine too!”. If they don’t, they get an alert that says “Ewwww”. </li>
+            <li>Make sure that the user can enter their answer in any capital letters or non-capital letters</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>More on operators</h2>
+        <p style="font-size: 30px">Use these operators to compare two values for equality, inequality, or difference.</p>
+<pre><code class="js" data-trim contenteditable>  
+  var myAge = 28;
+</code></pre>
+<table border="1" cellspacing="5" cellpadding="5" style="font-size: 16px; line-height: 1em;">
+  <thead>
+  <tr><td>Operator  <td>Meaning <td>True expressions
+  <tbody>
+  <tr><td>==    <td>Equality <td><code>myAge == 28</code> <br> <code>myAge == '28'</code> <br> <code>28 == '28'</code>
+  <tr><td>===  <td>Strict equality <td><code>myAge === 28</code>     
+  <tr><td>!=     <td>Inequality <td><code>myAge != 29</code>      
+  <tr><td>!==   <td>Strict inequality <td><code>myAge != '28'</code> <br> <code>28 != '28'</code>
+  <tr><td>&gt;  <td>Greater than <td><code>myAge &gt; 25</code> <br> <code>'28' &gt; 25</code>   
+  <tr><td>&gt;=<td>Greater than or equal <td><code>myAge &gt;= 28</code> <br> <code>'28' &gt;= 25</code>
+  <tr><td>&lt;   <td>Less than <td><code>myAge &lt; 30</code>  <br> <code>'28' &lt; 30</code>
+  <tr><td>&lt;= <td>Less than or equal <td><code>myAge &lt;= 28</code>  <br> <code>'28' &lt;= 28 </code>
+</table>
+
+            <p><b>Common mistake</b>: Do not confuse <code>=</code> (the assignment operator) with <code>==</code>.</p>
+    </section>
+
+    <section>   
+        <h2>Example</h2>
+        <p>If a visitor is under or equal to 18 years old, you can deny them access to your site. How would you write that in JS?</p>
+    </section>
+
+    <section>
+        <h2>Operators</h2>
+        <table>
+            <tr>
+                <th>True</th>
+                <th>False</th>
+            </tr>
+            <tr>
+                <td>5 < 10</td>
+                <td>10 < 5</td>
+            </tr>
+             <tr>
+                <td>10 >= 9</td>
+                <td>9 >= 10</td>
+            </tr>
+             <tr>
+                <td>9 <= 9</td>
+                <td>10 <= 9</td>
+            </tr>
+             <tr>
+                <td>100 === 100</td>
+                <td>100 === 101</td>
+            </tr>
+             <tr>
+                <td>0 !== 1</td>
+                <td>0 !== 0</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Remember</h2>
+        <ol>
+            <li class="fragment">Remember 100>100 is false, BUT 100>=100 is true.</li>
+            <li class="fragment">-12 < 0 is correct because negative numbers are less than zero. </li>
+            <li class="fragment">Numbers are always less than letters.</li>
+            <li class="fragment">What do you think happens if you say: “apple”<“bear”</li>
+            <li class="fragment">What about just two ==  ? (Just value, not type and value)</li>
+            <li class="fragment">!== means that two things are not equal, you can test for that too! (ex: 10 !==9 ) </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>True or false</h2>
+        <p>“javascript”===“JavaScript”</p>
+    </section>
+
+    <section>
+        <h2>True or false</h2>
+        <p>“3”===3</p>
+    </section>
+
+    <section>
+        <h2>True or false</h2>
+        <p>“lion” > “zebra”</p>
+    </section>
+
+    <section>
+        <h2>True or false</h2>
+        <p>“lion” !== “zebra”</p>
+    </section>
+
+    <section>
+        <h2>True or false</h2>
+        <p>1000 <= 1000</p>
+    </section>
+
+    <section>
+        <h2>Conditionals with Booleans</h2>
+        <p>You can use a boolean (true or false) as a condition in your if/else statements. </p>
+<pre><code class="js" data-trim contenteditable>  
+if ( true ) {
+    document.write("This is Correct!");
+}
+else {
+    document.write("This is Incorrect!");
+}
+</code></pre>
+    </section>
+
+    <section>
+        <h2>Truthy and Falsey</h2>
+        <p>"Falsey Values": these will evaluate to false if they are in the conditional statement</p>
+        <ul>
+            <li>0</li>
+            <li>-0</li>
+            <li>NaN</li>
+            <li>" "</li>
+            <li>false</li>
+            <li>null</li>
+            <li>undefined</li>
+        </ul>
+        <p style="font-size: 20px">What will this evaluate to?</p>
+ <pre><code class="js" data-trim contenteditable>  
+var a = 10;
+if (a) {
+    //code block
+}   
+</code></pre>    
+    </section>
+
+    <section>
+        <h2>Programming Multiple Outputs</h2>
+        <p>Often times, we have more that one input or condition, and therefore, will need more outputs.</p>
+        <p>Example: If it is sunny and warm, you can go to the beach. But if it is warm and raining, you will probably stay in.</p>
+        <img src="images/ifelse.png" alt="Control Flow Multiple Outputs">     
+    </section>
+
+    <section>
+        <h2>in pictures</h2>
+        <img src="images/if-else-statement.png" alt="Control Flow Multiple Outputs">
+    </section>
+
+    <section>
+        <p>No limit to the number of else if statements that you can have in your code!</p>
+<pre><code class="js" data-trim contenteditable>  
+var isTeacher = prompt("Are you a teacher?");
+var isStudent = prompt("Are you a student?");
+if ( isTeacher.toUpperCase() === "YES" ) {
+    alert("Welcome Teacher");
+}
+else if (isStudent.toUpperCase() === "YES") {
+    alert("Welcome student");
+}
+else {
+  alert ("Who are you?");
+}
+</code></pre>
+    </section>
+
+    <section>
+        <h2>Multiple Outputs</h2>
+        <p>What is the value of the variable itemsToBuy?</p>
+ <pre><code class="js" data-trim contenteditable>        
+var itemToBuy = " ";
+var savings = 100;
+if ( savings > 500 ) {
+  itemToBuy = "Computer";
+} else if ( savings > 200 ) {
+ itemToBuy = "Phone";
+} else if ( savings > 0 ) {
+ itemToBuy = "Dinner";
+} else {
+ itemToBuy = "...still saving...";
+}
+</code></pre>
+    </section>
+
+    <section>
+        <h2>Exercise</h2>
+        <p>Clock Exercise</p>
+        <ol>
+            <li>Create a variable called time and set it equal to the time that the user answers when you ask “What time is it?”</li>
+            <li>Create an if statement so that if the time is less than 10, the user will be greeted with a “Good Morning!” **NOTE: We are using military time.</li>
+            <li>If the time is less than 20, the user should be greeted by a “Good Afternoon!”.</li>
+            <li>If the answer is anything else, the user should be greeted by a “Good Evening!”.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Explaining Code</h2>
+        <p>The importance of being able to explain code and leaving comments!</p>
+    </section>
+
+    <section>
+        <h2>Another exercise</h2>
+        <p>Explain this code</p>
+<pre><code class="js" data-trim contenteditable>  
+var cupcakesSold = parseInt(prompt("How many cupcakes did you sell today?"));   
+var profitMargin = 30;
+if (cupcakesSold < profitMargin ) {
+    alert("Gotta sell more!");
+}
+else if (cupcakesSold == profitMargin) {
+    alert("Broke even!");
+}
+else {
+    alert("We are doing well!!!");
+}
+</code></pre>       
+    </section>
+
+    <section>
+        <h2>Another exercise</h2>
+        <p>Explain this code</p>
+<pre><code class="js" data-trim contenteditable> 
+var wholesalePrice = 5.45;
+var retailPrice = 9.99;
+var quantity = 47;
+var salesTotal= retailPrice * quantity;
+var profit= salesTotal-(wholesalePrice * quantity);
+if (profit > 400 ) {
+    document.write("Time to go home");
+}
+else {
+    document.write("Keep working");
+} 
+</code></pre>       
+    </section>
+
+    <section>
+        <h2>Logical Operators</h2>
+        <p>These are typically used in combination with the comparison operators:</p>
+<pre><code class="js" data-trim contenteditable> 
+var posNum = 4;
+var negNum = -2;
+</pre></code>
+<table border="2" cellspacing="5" cellpadding="5" style="font-size: 16px; line-height: 1em;">
+ <thead>
+  <tr><td>Operator <td>Meaning <td>True expressions
+ <tbody>
+ <tr><td>&&  <td>AND <td> <code>posNum &gt; 0 && negNum &lt; 0</code><br><br> <code>4 &gt; 0 && -2 &lt; 0</code>
+ <tr><td>||    <td>OR   <td> <code>posNum &gt; 0 || negNum &gt; 0 </code><br><br> <code>4 &gt; 0 || -2 &gt; 0 </code>
+ <tr><td>!     <td>NOT <td> <code>!(posNum === negNum)</code>  <br><br> <code> !(posNum &lt; 0) </code>
+</table>
+
+    <p style="font-size: 20px">When combining together multiple conditions, use parantheses to group:</p>
+<pre><code class="js" data-trim contenteditable> 
+var myAge = 28;
+if ((myAge &gt;= 0 && myAge &lt; 3)  || myAge &gt; 90) {
+  console.log("You're not quite in your peak.");
+}
+</pre></code>
+    </section>
+
+    <section>
+        <h2><span style="text-decoration: underline">And</span> Operator</h2>
+        <p>All statements have to be correct for something to be true (and for the program to run)</p>
+        <p class="fragment">Example: You need to be near a pool AND know how to swim in order to go swimming. </p>
+        <p class="fragment">We use && in order to have both of the conditions met. You put one condition on either side of the &&.</p>
+        <p class="fragment">You can have more than one set of &&</p>
+<pre class="fragment"><code class="js" data-trim contenteditable> 
+var age = 30;
+var gender= "female";
+if ( age > 18 && gender === "female" ) {
+    alert("Welcome!");
+}
+</pre></code>
+    </section>
+
+    <section>
+        <h2><span style="text-decoration: underline">Or</span> operator</h2>
+        <p>One of the statements has to be correct for something to be true (and for the program to run).</p>
+        <p class="fragment">Example: You need to be near a pool OR near the beach in order to go swimming. </p>
+        <p class="fragment">We use || in order to have both of the conditions met. You put one condition on either side of the ||.</p>
+<pre class="fragment"><code class="js" data-trim contenteditable> 
+var agree = prompt("Do you agree?");
+if ( agree === "Yes" || agree === "Y" ) {
+    alert("Welcome!");
+}
+</pre></code>       
+    </section>
+
+    <section>   
+        <h2>What will appear in the browsers console?</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable> 
+var ships = 10;
+var score = 0;
+if (  ships === 0 || score === 0 ) {
+  console.log('Game over.');
+}  else {
+  console.log('Your score is zero.');
+}
+</pre></code>  
+    </section>
+
+    <section>
+        <h2>What will appear in the browsers console?</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable> 
+var x = 10;
+var y = 20;
+if (  x < 10 && y > 10 ) {
+  console.log('The condition passes.');
+} else {
+  console.log('The condition fails.');
+}
+</pre></code> 
+    </section>
+
+    <section>   
+        <h2>Can I go out?</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable> 
+var hoursOfWork = 2;
+var today = 'Friday'
+
+if ( hoursOfWork >= 10 && today === 'Friday' ) {
+  alert("Too much work! I can’t go out");    
+} 
+else if ( hoursOfWork >= 5 && today === 'Friday' ) {
+  alert("I will catch up with you when I can");    
+}
+else if ( hoursOfWork === 2 && today === 'Friday' ) {
+  alert("It's Friday, let’s go!");   
+} else {
+  alert("This isn't Friday. I need to stay home.");
+}
+</pre></code> 
+    </section>
+
+    <section>
+        <h2>Review Exercise</h2>
+        <ul>
+            <li class="fragment">Create a variable named busRunning and ask the user if the bus is running today.</li>
+            <li class="fragment">Create a second variable named passengerNum and ask the user how many passengers are currently on the bus.</li>
+            <li class="fragment">Create a conditional statement that says if the bus is running AND the bus has less than or equal to 75 passengers, the program gives them an alert that says “You can take the bus!”</li>
+            <li class="fragment">Otherwise, the user should get an alert that says “You will have to wait.”</li>
+        </ul>
+        <aside class="notes">
+var busRunning = prompt("Is the bus running today?");
+var passengerNum = prompt("How many passengers are on the bus?");
+if (busRunning.toUpperCase() === "YES" && passengerNum >= 5 ) {
+    alert ("You can take the bus!")
+}
+else {
+    alert("You will have to wait.");
+}
+        </aside>
+    </section>
+
+    <section>
+        <h2>Review Exercise</h2>
+        <p>Create a variable named userAge and set it equal to the answer your user types into a prompt when asked how old they are. If the user is over 25 tell them that they can rent a car. If not tell them that they can’t rent a car. </p>
+    </section>
 
         <section>
             <h2>Introduction to Loops</h2>
@@ -150,7 +602,7 @@ while (num > 20 ) {
         <section>
             <h2>Important Notes</h2>
             <p class="fragment">The condition is evaluated BEFORE the loop. That means, if the condition is not true at the beginning, the loop will never run. </p>
-            <p class="fragment"><span style="color: red">You always need a way to break OUT of the loop (aka, the condition needs to be false at some point)</span>. Something has to change inside of the loop to stop it from running. Otherwise, you will be stuck in an endless loop and your browser can crash.</p>
+            <p class="fragment"><span style="color: yellow">You always need a way to break OUT of the loop (aka, the condition needs to be false at some point)</span>. Something has to change inside of the loop to stop it from running. Otherwise, you will be stuck in an endless loop and your browser can crash.</p>
         </section>
 
         <section>
@@ -173,94 +625,6 @@ while (num > 20 ) {
                 } <br>
                 }</p>
             </aside>
-        </section>
-
-        <section>
-            <h2>Hacking</h2>
-            <p style="font-size: 20px;">Say you are a code breaker and you want your computer to guess the random number between 1 and 10000 that another computer is generating.</p>
-            <ul>
-                <li class="fragment">First, we need to generate a random number from 1 to 10000. This is the number the computer needs to guess.</li>
-                <li class="fragment">Two, we'll enter a while loop that the computer will use to guess the random number.</li>
-                <li class="fragment">If the number the computer guesses matches the number generated at the beginning of the program, then the loop ends.</li>
-                <li class="fragment">If not, the loop continues until the correct number is guessed by the computer. (At which point, we exit the loop and print the random number and the number of times it took the computer to guess it.)</li>
-            </ul>
-            <aside class="notes">
-                <p>var randomNumber = Math.floor(Math.random() * 10000) + 1; <br>
-                var counter = 0; <br>
-                while (randomNumber !== ourGuess) { <br>
-                var ourGuess = Math.floor(Math.random() * 10000) + 1; <br>
-                counter++; <br>
-                } <br>  
-                console.log(ourGuess); <br>
-                console.log(counter);</p>
-            </aside>
-        </section>
-
-        <section>
-            <h2>Hacking Part 2</h2>
-            <p>The code we want to write opens a prompt, asks for a password, and writes to the document. Something is missing. Add a while loop, so that a prompt keeps appearing until the user types "sesame" into the prompt.</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>          
-var secret = prompt("What is the secret password?");
-    //Your code here
-document.write("You know the secret password. Welcome.");
-</code></pre>
-        <aside class="notes"> 
-        <p> var secret = prompt("What is the secret password?"); <br>
-        while (secret.toLowerCase() !== "sesame"){ <br>
-        secret = prompt("Try again"); <br>
-        } <br>
-        document.write("You know the secret password. Welcome.");</p>
-        </aside>
-        </section>
-
-        <section>
-            <h2>The Do While Loop</h2>
-            <p class="fragment"> This loop is very similar to the while loop. It executes the code in the code block over and over again as long as the condition is true. </p>
-            <p class="fragment">The one key difference is that the do while loop will always execute the code block at least once. The condition isn’t tested until after the code block runs once.</p>
-            <img class="fragment" src="images/dowhile.png" alt="">
-        </section>
-
-        <section>
-            <h2>Do While</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                
-do { 
-    //code block
-} while ( the condition ) 
-</code></pre>
-            <p class="fragment">Example:</p>
-            <p class="fragment">You pop open a prompt dialog and ask for a user's email address. If the user types “haha, I'm not gonna tell you”, you might want to pop open the prompt a second time and ask for the email address. In fact, you might want to pop open that prompt over and over again until the user types in a valid email address. </p>
-            <p class="fragment">In other words, you want to run a loop at least once to ask for a response but maybe more times as well, until the correct answer is supplied.</p>
-        </section>
-
-        <section>
-            <h2>Example</h2>
-            <p>Given the code below, what will print out to the console? </p>
-<pre class="fragment"><code class="js" data-trim contenteditable>             
-do {
-  console.log('Hello');
-} while (false) 
-console.log(‘Goodbye’);
-</code></pre>
-        <aside class="notes">"Hello"</aside>
-        </section>
-
-        <section>
-            <h2>White Board Challenge</h2>
-            <p>How would we change the following code to have a do while loop instead of a while loop?</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>             
-var secret = prompt("What is the secret password?");
-while ( secret !== "sesame" ) {
-  secret = prompt("What is the secret password?");    
-}
-document.write("You know the secret password. Welcome.");
-</code></pre>
-        <aside class="notes">
-            <p> do { <br>
-            var secret = prompt("What is the secret password?"); <br>
-            } while ( secret !== "sesame" ) <br>
-            document.write("You know the secret password. Welcome.");
-            </p>
-        </aside>
         </section>
 
         <section>
@@ -590,11 +954,6 @@ function printMovie(movieObject){
 printMovie(interstellar);
 printMovie(titanic);       
             </aside>
-        </section>
-
-        <section>   
-            <h2>In-class Review Exercise</h2>
-            <p style="color:yellow">JSFile</p>
         </section>
 
         <section>
