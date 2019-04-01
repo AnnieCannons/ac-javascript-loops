@@ -47,7 +47,7 @@
         </section>
 
         <section>
-            <h2>What do our program need?</h2>
+            <h2>What do our programs need?</h2>
             <p class="fragment">1. Ways to see if the program is working under certain conditions</p>
             <p class="fragment">2. Ways to make our programs responsive to the user</p>
             <img class="fragment" src="images/puppy.gif" alt="Happy Puppy">
@@ -66,6 +66,21 @@
         </section>
 
         <section>
+            <h2>In pictures</h2>
+            <p class="fragment">The previous picture helps us understand "Control Flow"</p>
+            <p class="fragment">Based on what happens in the program (what the user decides), different code will be run.</p>
+            <p class="fragment">The word "block" refers to the code that is being called in response to the condition.</p>
+        </section>
+
+        <section>
+            <h2>In Class Exercise</h2>
+            <ul>
+                <li>Write an example on control flow in real life on the board.</li>
+                <li>Write an example on control flow in a website that you regularly use on the board.</li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Conditional Statements</h2>
             <p>A very simple conditional statement: (the one we will start with) is <span style="color:yellow">If something is true, then do this</span>. </p> 
 <pre><code class="js" data-trim contenteditable>
@@ -73,12 +88,9 @@ if ( the condition ) {
 //the code that runs if the condition is true, called a code block
 }   
 </code></pre>
+            <p class="fragment">Note! There is no semi-colon at the end of the statement.</p>
         </section>
 
-        <section>
-            <h2>Note!</h2>
-            <p>There is no semi-colon at the end of the statement.</p>
-        </section>
 
         <section>
             <h2>The if statement</h2>
@@ -104,7 +116,29 @@ if (x > 0) {
      </section>
 
      <section>
-         <h2>The if and else statements</h2>
+        <h2>In pictures</h2>
+            <p class="fragment">The previous picture helps us understand a more complex Control Flow</p>
+            <p class="fragment">Instead of just testing if a condition is true, we have a block of code to run if it is NOT true.</p>
+            <p class="fragment">The "else" statement is great to help us have an option if the main condition we are testing is "false".</p>
+    </section>
+
+    <section>
+        <h2>The if and else statements</h2>
+        <p>Example:</p>
+<pre><code class="js" data-trim contenteditable>            
+var answer = prompt("What is your favorite number?");
+if ( answer > 10 ) {
+   alert("You like large numbers!");
+} else
+{
+   alert("You like small numbers!");
+}
+//only one message will appear 
+</code></pre>
+    </section>
+
+     <section>
+         <h2>Another example</h2>
          <p>Example:</p>
 <pre><code class="js" data-trim contenteditable>            
 var answer = prompt("What programming language is the name of a gem?");
@@ -125,16 +159,16 @@ else {
          <p>It's used to test if two values are exactly the same. If they are the same, then the condition is true and the code inside the braces runs.</p>
      </section>
     
-    <section>
-        <h2>Exact equivalence</h2>
-        <p>In the earlier JavaScript we wrote, write “ruby” instead of “Ruby”. Do you get the right answer?</p>
-        <p class="fragment">A solution</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>         
-if ( answer.toUpperCase() === "RUBY" ) {
-    alert("Correct!");
+     <section>
+        <h2>Exact equivalence exmaple</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>       
+var answer = prompt("What is the current month?");
+if ( answer === "May" ) {
+    alert("This is such a great month!");
+} else {
+    alert("This is an okay month.");
 }
 </code></pre>
-        <p class="fragment">This will make the answer that your user gives correct, no matter the case!</p>
     </section>
 
     <section>   
@@ -144,6 +178,7 @@ if ( answer.toUpperCase() === "RUBY" ) {
             <li>Create a conditional statement so that if the user answers your favorite food, they get an alert that says “Mine too!”. If they don’t, they get an alert that says “Ewwww”. </li>
             <li>Make sure that the user can enter their answer in any capital letters or non-capital letters</li>
         </ul>
+        <img src="images/exercise.gif" alt="Exercise Time">
     </section>
 
     <section>
@@ -166,7 +201,19 @@ if ( answer.toUpperCase() === "RUBY" ) {
   <tr><td>&lt;= <td>Less than or equal <td><code>myAge &lt;= 28</code>  <br> <code>'28' &lt;= 28 </code>
 </table>
 
-            <p><b>Common mistake</b>: Do not confuse <code>=</code> (the assignment operator) with <code>==</code>.</p>
+            <p><b>Common mistake</b>: Do not confuse <code>=</code> <a href="https://anniecannons.github.io/ac-intro-to-js/#/22">(the assignment operator)</a> with <code>==</code>.</p>
+    </section>
+
+    <section>
+        <h2>Exact equivalence</h2>
+        <p>In the earlier JavaScript we wrote, write “ruby” instead of “Ruby”. Do you get the right answer?</p>
+        <p class="fragment">A solution</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>         
+if ( answer.toUpperCase() === "RUBY" ) {
+    alert("Correct!");
+}
+</code></pre>
+        <p class="fragment">This will make the answer that your user gives correct, no matter the case!</p>
     </section>
 
     <section>   
@@ -219,39 +266,46 @@ if ( answer.toUpperCase() === "RUBY" ) {
     <section>
         <h2>True or false</h2>
         <p>“javascript”===“JavaScript”</p>
+        <p class="fragment">false</p>
     </section>
 
     <section>
         <h2>True or false</h2>
         <p>“3”===3</p>
+        <p class="fragment">false</p>
     </section>
 
     <section>
         <h2>True or false</h2>
         <p>“lion” > “zebra”</p>
+        <p class="fragment">false</p>
     </section>
 
     <section>
         <h2>True or false</h2>
         <p>“lion” !== “zebra”</p>
+        <p class="fragment">true</p>
     </section>
 
     <section>
         <h2>True or false</h2>
         <p>1000 <= 1000</p>
+        <p class="fragment">true</p>
     </section>
 
     <section>
-        <h2>Conditionals with Booleans</h2>
-        <p>You can use a boolean (true or false) as a condition in your if/else statements. </p>
-<pre><code class="js" data-trim contenteditable>  
-if ( true ) {
-    document.write("This is Correct!");
-}
-else {
-    document.write("This is Incorrect!");
-}
-</code></pre>
+        <h2>Can there be things besides true/false?</h2>
+        <p>JavaScript has to be able to deal with values that are not exactly "true" or "false"</p>
+        <p>People call these Truthy and Falsey values</p>
+        <p style="font-size: 20px">What will this evaluate to?</p>
+ <pre><code class="js" data-trim contenteditable>  
+var a = 10;
+if (a) {
+    alert("yaaaay!");
+} else {
+    alert("boooo!");
+}   
+</code></pre> 
     </section>
 
     <section>
@@ -265,14 +319,20 @@ else {
             <li>false</li>
             <li>null</li>
             <li>undefined</li>
-        </ul>
-        <p style="font-size: 20px">What will this evaluate to?</p>
- <pre><code class="js" data-trim contenteditable>  
-var a = 10;
+        </ul>  
+    </section>
+
+    <section>
+        <h2>Truthy and Falsey</h2>
+<pre><code class="js" data-trim contenteditable>  
+var a;
 if (a) {
-    //code block
-}   
-</code></pre>    
+    alert("yay!")
+} else {
+    alert("boooo!")
+}  
+</code></pre> 
+    <p>Will the code block run?</p>
     </section>
 
     <section>
@@ -331,11 +391,14 @@ if ( savings > 500 ) {
             <li>If the time is less than 20, the user should be greeted by a “Good Afternoon!”.</li>
             <li>If the answer is anything else, the user should be greeted by a “Good Evening!”.</li>
         </ol>
+        <img src="images/exercise.gif" alt="Exercise time"/>
     </section>
 
     <section>
         <h2>Explaining Code</h2>
-        <p>The importance of being able to explain code and leaving comments!</p>
+        <p>It is really helpful to practice explaining code, especially code that you haven't written.</p>
+        <p>If you can explain code, your ability to write code greatly increases!</p>
+        <img src="images/gotthis.gif" alt="You got this" />
     </section>
 
     <section>
@@ -404,7 +467,6 @@ if ((myAge &gt;= 0 && myAge &lt; 3)  || myAge &gt; 90) {
         <p>All statements have to be correct for something to be true (and for the program to run)</p>
         <p class="fragment">Example: You need to be near a pool AND know how to swim in order to go swimming. </p>
         <p class="fragment">We use && in order to have both of the conditions met. You put one condition on either side of the &&.</p>
-        <p class="fragment">You can have more than one set of &&</p>
 <pre class="fragment"><code class="js" data-trim contenteditable> 
 var age = 30;
 var gender= "female";
@@ -413,6 +475,20 @@ if ( age > 18 && gender === "female" ) {
 }
 </pre></code>
     </section>
+
+    <section>
+            <h2><span style="text-decoration: underline">And</span> Operator</h2>
+            <p>Another example</p>
+            <p class="fragment">You can have more than one set of &&</p>
+    <pre class="fragment"><code class="js" data-trim contenteditable> 
+    var age = 30;
+    var gender= "female";
+    var name = "Michelle"
+    if ( age > 18 && gender === "female" && name === "Michelle" ) {
+        alert("Welcome!");
+    }
+    </pre></code>
+        </section>
 
     <section>
         <h2><span style="text-decoration: underline">Or</span> operator</h2>
@@ -481,6 +557,7 @@ else if ( hoursOfWork === 2 && today === 'Friday' ) {
             <li class="fragment">Create a conditional statement that says if the bus is running AND the bus has less than or equal to 75 passengers, the program gives them an alert that says “You can take the bus!”</li>
             <li class="fragment">Otherwise, the user should get an alert that says “You will have to wait.”</li>
         </ul>
+        <img src="images/exercise.gif" alt="Exercise time">
         <aside class="notes">
 var busRunning = prompt("Is the bus running today?");
 var passengerNum = prompt("How many passengers are on the bus?");
@@ -496,6 +573,11 @@ else {
     <section>
         <h2>Review Exercise</h2>
         <p>Create a variable named userAge and set it equal to the answer your user types into a prompt when asked how old they are. If the user is over 25 tell them that they can rent a car. If not tell them that they can’t rent a car. </p>
+        <img src="images/exercise.gif" alt="Exercise time">
+    </section>
+
+    <section>
+        <h1>Loops!</h1>  
     </section>
 
         <section>
@@ -507,7 +589,6 @@ else {
         <section>
             <h2>Introduction to Loops</h2>
             <p class="fragment">For example, you would use loops when creating a list of 100 random numbers, displaying 20 photos downloaded from a photo sharing website like Flickr, or repeatedly popping up a prompt dialog until a visitor correctly enters an answer to a quiz question.</p>
-            <p class="fragment">Race track example</p>
         </section>
 
         <section>
@@ -586,6 +667,7 @@ while (num > 20 ) {
   num += 1;
 }
 </code></pre>
+    <p class="fragment"> This loop will never run! 0 will never be greater than 20.</p>
         </section>
 
         <section>
@@ -600,31 +682,38 @@ while (num > 20 ) {
         </section>
 
         <section>
-            <h2>Important Notes</h2>
+            <h2>Important Note 1</h2>
             <p class="fragment">The condition is evaluated BEFORE the loop. That means, if the condition is not true at the beginning, the loop will never run. </p>
-            <p class="fragment"><span style="color: yellow">You always need a way to break OUT of the loop (aka, the condition needs to be false at some point)</span>. Something has to change inside of the loop to stop it from running. Otherwise, you will be stuck in an endless loop and your browser can crash.</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                
+var num = 0;
+while (num > 20 ) {
+    alert(num);
+    num += 1;
+}
+</code></pre>
         </section>
 
         <section>
-            <h2>Exercises</h2>
-            <p>1. Use a while loop to add up the numbers 1 to 20. Console log the total.</p>
-            <p>2. Use a while loop to print out the even numbers from 1 to 20. </p>
-            <aside class="notes">
-                <p>var counter = 0;<br>
-                var sum = 0; 
-                while (counter < 20) { <br>
-                counter += 1; <br>
-                sum += counter;<br>
-                } <br>
-                console.log(sum);</p>
-                <p>var counter = 0;<br>
-                while (counter < 20){ <br>  
-                counter +=1; <br>
-                if (counter % 2 ===0){ <br>
-                console.log(counter); <br>
-                } <br>
-                }</p>
-            </aside>
+            <h2>Important Note 2</h2>
+            <p class="fragment"><span style="color: yellow">You always need a way to break OUT of the loop (aka, the condition needs to be false at some point)</span>. Something has to change inside of the loop to stop it from running. Otherwise, you will be stuck in an endless loop and your browser can crash.</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                
+var num = 0;
+while (num === 0 ) {
+    alert(num);
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>While Loop Number Exercise 1</h2>
+            <p>Use a while loop to add up the numbers 1 to 20. Console log the total.</p>
+            <img src="images/exercise.gif" alt="Exercise time"/>
+        </section>
+
+        <section>
+            <h2>While Loop Number Exercise 2</h2>
+            <p>Use a while loop to print out the even numbers from 1 to 20. </p>
+            <img src="images/exercise.gif" alt="Exercise time"/>
         </section>
 
         <section>
@@ -761,44 +850,49 @@ while (counter < 10) {
         </section>
 
         <section>
-            <h2>The Recipe Card</h2>
-            <p>Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).</p>
-            <p class="fragment">On separate lines (one console.log statement for each), log the recipe information so it looks like: </p>
-            <img class="fragment" src="images/recipe1.png" alt="">
-            <aside class="notes">
-                <p>var macandcheese = { <br>
-                    name: "Mac and Cheese", <br>
-                    servings: 10, <br>
-                    ingredients: ["pasta", "milk", "cheese", "cumin", "more cheese"] <br>
-                    }; <br>
-
-                console.log(macandcheese.name); <br>
-                console.log(macandcheese.servings); <br>
-                for (var i = 0; i < macandcheese.ingredients.length; i++){ <br> 
-                    console.log(macandcheese.ingredients[i]); <br>
-                }</p>
-            </aside>
+            <h2>Looping through an array</h2>
+            <ul>
+                <li>You can use a loop to go through each item of an array.</li>
+                <li>Remember: arrays use zero indexes to count each element that is stored inside of them.</li>
+            </ul>
+<pre class="fragment"><code class="js" data-trim contenteditable>       
+var favoriteColors = ["red", "blue", "purple", "yellow"];
+for (var i = 0; i < favoriteColors.length ; i++){
+    console.log("I really like the color: " + favoriteColors[i]);
+}
+</code></pre>
         </section>
 
         <section>
-            <h2>Arrays and Loops</h2>
+            <h2>The Recipe Card</h2>
+            <p>Create an object to hold information on your favorite recipe. It should have properties for title (a string), servings (a number), and ingredients (an array of strings).</p>
+            <p class="fragment">On separate lines (one console.log statement for each), log the recipe information so it looks like: </p>
+            <img class="fragment" src="images/recipe1.png" alt="Recipe Card"></br>
+            <img class="fragment" src="images/exercise.gif" alt="Exercise time"/>
+        </section>
+
+        <section>
+            <h2>Quick Note!</h2>
+            <p>An additional math operator in JavaScript called the modulus.</p>
+            <p>It is noted by the "%" sign, and helps us find the remainder. It can help us find out what something is divisible by.</p>
+        </section>
+
+        <section>
+            <h2>Modulus</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>       
+10 % 2 === 0 //this is true
+9 % 3 === 0 //this is true
+10 % 3 === 1 //this is true
+15 % 4 === 0 //this is false
+</code></pre>         
+        <p class="fragment">Remember, the modulus tells us if there is a remainder after the number on the left has been divided into by the number on the right.</p>
+        </section>
+
+        <section>
+            <h2>Arrays and Loops Exercise</h2>
             <p>Find all of the even numbers from 0-100 and add them to an array called “even”.</p>
             <p>Find all the numbers divisible by 8 in "even" and add it to a different array called “myEights”.</p>
-            <aside class="notes">
-                <p>var even = []; <br>
-                for (var i = 0; i <= 100; i = i + 2){ <br>
-                even.push(i); <br>
-                } <br>
-                console.log(even); <br>
-
-                var myEights = []; <br>
-                for (var  i = 0; i < even.length; i++){ <br>
-                if (even[i] % 8 === 0){ <br>
-                    myEights.push(even[i]); <br>
-                } <br>
-                } <br>
-                console.log(myEights);</p>
-            </aside>
+            <img class="fragment" src="images/exercise.gif" alt="Exercise time"/>
         </section>
 
         <section>
@@ -809,100 +903,7 @@ while (counter < 10) {
                 <li>Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.</li>
                 <li>Call the function with the favoriteFood array.</li>
             </ul>
-            <aside class="notes">
-                <p>var favoriteFood = ["Mac and Cheese", "Hot Cheetos", "Popcorn Shrimp", "Steak", "Cheesecake", "Gumbo"]; <br>
-                var coachFavorite = ["bones", "plastic", "steak", "dirt"]; <br>
-                function printFoods(lists){ <br>
-                for (var i = 0; i < lists.length; i++){ <br>   
-                    console.log("My number " + (i + 1) + " favorite food is " + lists[i]); <br>
-                } <br>
-                } <br>
-                printFoods(favoriteFood); <br>
-                printFoods(coachFavorite);</p>
-            </aside>
-        </section>
-
-        <section>
-            <h2>Objects Review</h2>
-            <ul>
-                <li class="fragment">An object in JavaScript is a self-contained set of related values and functions.</li>
-                <li class="fragment">It is a great way to keep data and functions about one item (or object) together.</li>
-                <li class="fragment">An object literal is an object that is created directly in the language by wrapping all of its properties and methods in curly braces. (It’s the one we learned. The other type of object is object constructor— don’t worry about that now!)</li>
-                <li class="fragment">Objects contain key/value pairs. </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Example of Object Literal</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>             
-var superman = {
-    name: "Superman",
-    fakeName: "Clark Kent",
-    height: 6.4,
-    weight: 215,
-    hero: true,
-    allies: ["Superwoman", "Batman", "Wolverine"],
-    fly: function() {
-        return "Up, up, and away!";
-    }
-}
-</code></pre>
-        </section>
-
-        <section>
-            <h2>Adding Items to Objects</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable> 
-var coach = {
-  favFood: ["cords","sticks", "penguins"],
-  owner: {name:"Jessica", age: 32, city: "SF"}
-};
-coach.favFood.push("chicken");
-console.log(coach.favFood);
-coach.owner.hairColor = "bronze";
-function hair() {
-  console.log(coach.owner.hairColor);
-}
-hair();
-</code></pre>           
-        </section>
-
-        <section>
-            <h2>For loops with objects</h2>
-            <p>We can loop through all of an object’s keys and values by using a for in loop (this is specific to objects). </p>
-            <p class="fragment">We can create a variable “key” . This is then used to represent the name of each key in the superman object in the for loop.</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-for (var key in superman) {
-    console.log(key + “: ” + superman[key]); 
-}
-</code></pre>
-            <p class="fragment">This will log to the console all of the data in our superman object.</p>
-        </section>
-
-        <section>
-            <h2>Object Iterating Exercise</h2>
-            <p>Given an object:</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>      
-var class = { 
-    lovely: "orange",
-    hptrust: "red",
-    drjules: "purple",
-    sparkle: "yellow",
-    infinite: "blue",
-    missmorpheus: "silver",
-    ubuspeaks: "green",
-    taiyz: "pink"
-}
-</code></pre>
-            <p class="fragment">Find all of the pink values and return an array of the names with pink value.</p>
-            <aside class="notes">
-var pinkNames = [];
-for (var key in acClass) {
-  if (acClass[key] === "pink"){
-    pinkNames.push(key);
-  }
-}
-console.log(pinkNames);
-            </aside>
+            <img src="images/exercise.gif" alt="Exercise time"/>
         </section>
 
          <section>
@@ -910,24 +911,12 @@ console.log(pinkNames);
             <p class="fragment">Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).</p>
             <p class="fragment">Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien".</p>
             <p class="fragment">Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'</p>
-            <aside class="notes">
-for (var i = 0; i < bookList.length; i++){
-    console.log(bookList[i].title + " by " + bookList[i].author);
-}
-
-for (var i = 0; i < bookList.length; i++){
-  if (bookList[i].alreadyRead === true){
-    console.log("You already read " + bookList[i].title + " by " + bookList[i].author);
-  } else {
-    console.log("You still need to read " + bookList[i].title + " by " + bookList[i].author);
-  }
-} 
-            </aside>
         </section>
 
         <section>
             <h2>in pictures</h2>
-            <img src="images/for-statement.png" alt="Control Flow">
+            <img src="images/for-statement.png" alt="Control Flow" width="500px">
+            <p>This image visually depicts a for loop that has an in statement inside of its code block. When might we want to use that?</p>
         </section>
         
         <section>
@@ -957,18 +946,87 @@ printMovie(titanic);
         </section>
 
         <section>
-            <h2>Advanced Array Tools</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sRUHJJugU9s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </section>
-
-        <section>
-            <h2>Advanced Array Tools</h2>
-            <p>More resources here:</p>
-            <ol>
-                <li><a href="https://github.com/emckean/NI-Hooray-For-Arrays/blob/master/HoorayForArrays.ipynb">Resources from the talk</a></li>
-                <li>More resources on array tools <a href="https://scrimba.com/playlist/playlist-3?utm_source=Scrimba+main&utm_campaign=d248a34a9a-AUTOMATION__1&utm_medium=email&utm_term=0_1475ca4552-d248a34a9a-92505767">here</a>
-            </ol>
-        </section>
+                <h2>Objects Review</h2>
+                <ul>
+                    <li class="fragment">An object in JavaScript is a self-contained set of related values and functions.</li>
+                    <li class="fragment">It is a great way to keep data and functions about one item (or object) together.</li>
+                    <li class="fragment">An object literal is an object that is created directly in the language by wrapping all of its properties and methods in curly braces. (It’s the one we learned. The other type of object is object constructor— don’t worry about that now!)</li>
+                    <li class="fragment">Objects contain key/value pairs. </li>
+                </ul>
+            </section>
+    
+            <section>
+                <h2>Example of Object Literal</h2>
+    <pre class="fragment"><code class="js" data-trim contenteditable>             
+    var superman = {
+        name: "Superman",
+        fakeName: "Clark Kent",
+        height: 6.4,
+        weight: 215,
+        hero: true,
+        allies: ["Superwoman", "Batman", "Wolverine"],
+        fly: function() {
+            return "Up, up, and away!";
+        }
+    }
+    </code></pre>
+            </section>
+    
+            <section>
+                <h2>Adding Items to Objects</h2>
+    <pre class="fragment"><code class="js" data-trim contenteditable> 
+    var coach = {
+      favFood: ["cords","sticks", "penguins"],
+      owner: {name:"Jessica", age: 32, city: "SF"}
+    };
+    coach.favFood.push("chicken");
+    console.log(coach.favFood);
+    coach.owner.hairColor = "bronze";
+    function hair() {
+      console.log(coach.owner.hairColor);
+    }
+    hair();
+    </code></pre>           
+            </section>
+    
+            <section>
+                <h2>For loops with objects</h2>
+                <p>We can loop through all of an object’s keys and values by using a for in loop (this is specific to objects). </p>
+                <p class="fragment">We can create a variable “key” . This is then used to represent the name of each key in the superman object in the for loop.</p>
+    <pre class="fragment"><code class="js" data-trim contenteditable>                                   
+    for (var key in superman) {
+        console.log(key + “: ” + superman[key]); 
+    }
+    </code></pre>
+                <p class="fragment">This will log to the console all of the data in our superman object.</p>
+            </section>
+    
+            <section>
+                <h2>Object Iterating Exercise</h2>
+                <p>Given an object:</p>
+    <pre class="fragment"><code class="js" data-trim contenteditable>      
+    var class = { 
+        lovely: "orange",
+        hptrust: "red",
+        drjules: "purple",
+        sparkle: "yellow",
+        infinite: "blue",
+        missmorpheus: "silver",
+        ubuspeaks: "green",
+        taiyz: "pink"
+    }
+    </code></pre>
+                <p class="fragment">Find all of the pink values and return an array of the names with pink value.</p>
+                <aside class="notes">
+    var pinkNames = [];
+    for (var key in acClass) {
+      if (acClass[key] === "pink"){
+        pinkNames.push(key);
+      }
+    }
+    console.log(pinkNames);
+                </aside>
+            </section>
 
         <section>
             <h1>The End</h1>
