@@ -1415,7 +1415,7 @@ for (var key in superman) {
                 <h2>Object Iterating Exercise</h2>
                 <p>Given an object:</p>
     <pre class="fragment"><code class="js" data-trim contenteditable>      
-var class = { 
+var acClass = { 
     lovely: "orange",
     hptrust: "red",
     drjules: "purple",
@@ -1435,6 +1435,7 @@ for (var key in acClass) {
     }
 }
 console.log(pinkNames);
+<a href="https://jsbin.com/legajov/edit?js,console" target="_blank">JS Bin solution with Extensions</a>
                 </aside>
             </section>
 
@@ -1461,6 +1462,7 @@ var summit = {
 </code></pre>
                 <p class="fragment" style="width: 60%; float: left;">Find all web values AND phone-or-web values; </span><span class="fragment">store their users in an array. </span><span class="fragment">Count the number of times your for in loop executes. </span><span class="fragment">Divide the length of the array with the loop count to get percentage. </span><span class="fragment">If percentage is 80%+, tell CFO to invest in the web-only plan.</span></p>
                 <aside class="notes">
+<a href="https://jsbin.com/bepodoz/edit?js,console" target="_blank">JS Bin solution with Extensions</a>
 var webUsers = [];
 var count = 0;
 for (var key in summit) {
@@ -1492,19 +1494,21 @@ var remedy = {
     }
 }
 </code></pre>
-                <p class="fragment">You prefer doses of tincture at mealtimes and tea at lunchtime. Write a for in loop with if/else statements that alerts you to take your remedies.</p>
+                <p class="fragment">You prefer doses of tincture at mealtimes and tea at lunchtime. Write a for in loop with if/else statements that alerts you: "Time to take your tincture of [herbs]" or "Time to take your tincture of [tincture herbs] and cup of [tea herbs]"</p>
                 <aside class="notes">
-time = prompt("What time is it? Whole numbers, military time please.")
+<a href="https://jsbin.com/wapodeg/edit?js,console" target="blank">JS Bin solution with Extensions</a>
+time = parseInt(prompt("What time is it? Whole numbers, military time please."));
+var time = parseInt(prompt("what time is it?"));
 for (var key in remedy) {
-    if (time >= 8 && time < 12 ) {
-    alert("Time to take your tincture!");
-    } else if (time >= 12 && time < 18) {
-    alert("Time to take your tincture and your tea!");
-    } else if (time >= 18 && time < 20 ) {
-    alert("Time to take your tincture!");
-    } else {
-        alert("Zzzz. Alert is dozing. You should, too. :)")
-    }
+  if (time < 12 && time >= 7 && key === "tincture") {
+    alert("Time for your " + key + " of " + remedy[key].herbs);
+  } else if (time === 12){
+    alert("Time for your tincture of " + remedy.tincture.herbs + " and cup of " + remedy.tea.herbs);
+  } else if (time >= 18 && time < 20 ) {
+    alert("Time for your " + key + " of " + remedy[key].herbs);
+  } else {
+    alert("Zzzz. Alert is dozing. You should, too. :)")
+  }
 }
                 </aside>
             </section>
@@ -1533,6 +1537,7 @@ for (var key in newStudent) {
 }
     </code></pre> 
                 <aside class="notes">
+<a href="https://jsbin.com/loronev/edit?js,console" target="_blank">JS Bin Solution with Extensions</a>
 //simple statement that actually needs no if condition
 for (var key in newStudent) {
     if (newStudent.name === "Angelique") {
