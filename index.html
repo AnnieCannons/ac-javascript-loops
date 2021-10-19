@@ -60,7 +60,8 @@
                 <li>Conditional Statement Syntax</li>
                 <li>Equivalency Operators</li>
                 <li>Logical Operators</li>
-                <li>Loops</li>
+                 <li>Loops Introduction</li>
+                <li>For Loops</li>
             </ul>
         </section>
 
@@ -168,7 +169,8 @@
                 <li>Conditional Statement Syntax</li>
                 <li>Equivalency Operators</li>
                 <li>Logical Operators</li>
-                <li>Loops</li>
+                <li>Loops Introduction</li>
+                <li>For Loops</li>
             </ul>
         </section>
 
@@ -295,7 +297,8 @@ else {
             <li class="green">Conditional Statement Syntax</li>
             <li>Equivalency Operators</li>
             <li>Logical Operators</li>
-            <li>Loops</li>
+            <li>Loops Introduction</li>
+            <li>For Loops</li>
         </ul>
     </section>
 
@@ -523,7 +526,8 @@ if (a) {
             <li class="green">Conditional Statement Syntax</li>
             <li class="green">Equivalency Operators</li>
             <li>Logical Operators</li>
-            <li>Loops</li>
+            <li>Loops Introduction</li>
+            <li>For Loops</li>
         </ul>
     </section>
 
@@ -849,7 +853,8 @@ else {
             <li class="green">Conditional Statement Syntax</li>
             <li class="green">Equivalency Operators</li>
             <li class="green">Logical Operators</li>
-            <li>Loops</li>
+            <li>Loops Introduction</li>
+            <li>For Loops</li>
         </ul>
     </section>
 
@@ -865,7 +870,7 @@ else {
                 <li>for a designated number of times, OR</li>
                 <li>until a certain condition is met</li>
             </ul>
-            <p class="fragment">Situational Examples: 4 x 100-meter relay race, wash cycle for whites, bedtime routine, etc.</p>
+            <aside class="notes">Situational Examples: 4 x 100-meter relay race - each person runs 100 meters (loop for every person); new applicants at the DMV (every person stands in line, fill out application, photo, get card); toothbrushing (loop through brushing each tooth); etc.</aside>
         </section>
 
         <section>
@@ -879,16 +884,16 @@ else {
                 <li class="fragment">customize the formatting of a downloaded list of To Do items.</li>
             </ul>
             <p class="fragment">Can you think of a situation where you would use a loop?</p>
+            <aside class="notes">For the last question, have 1 to 2 trainees share examples and then discuss their answers.</aside>
         </section>
 
         <section>
             <h2>Loops</h2>
             <p>There are many different ways to create loops in JavaScript (and other programming languages).</p>
-            <p>We will focus on “while” and “for” loops.</p>
             <img src="images/coaster.png" alt="Roller coaster as a visual representation of a loop, an action that repeats until a condition is met">
         </section>
 
-        <section>
+        <!-- <section> 
             <h2>Review on Conditionals</h2>
             <p>A '<code style="color: aqua;">while</code>' statement repeats a section of code as long as a condition is true.</p>
             <p>What is a condition (aka true/false)?</p>
@@ -961,7 +966,7 @@ while (counter < 10) {
 }
 </code></pre>
             <p class="fragment">We can easily make counter < 1000!</p>
-        </section>
+        </section> -->
 
         <section>
             <h2>Loops</h2>
@@ -970,7 +975,7 @@ while (counter < 10) {
             <img class="fragment" src="https://media.tenor.co/images/a6392f519c8e01fa9c44fe25b171038e/raw" alt="">
         </section>
 
-        <section>
+        <!-- <section> 
             <h2>What's wrong with this loop?</h2>
  <pre class="fragment"><code class="js" data-trim contenteditable>                                
 var num = 0;
@@ -1063,6 +1068,237 @@ while (ourGuess !== numberToGuess) {
 document.write("&lt;p&gt;The random number was " + numberToGuess + 
 ". It took the computer " + attempts + " tries to get it right.&lt;/p&gt;");
 </code></pre>
+        </section> -->
+
+        <section>
+            <h2>Conditional Statements and Loops Overview</h2>
+            <ul>
+                <li class="green">Understanding Control Flow</li>
+                <li class="green">Conditional Statement Syntax</li>
+                <li>Equivalency Operators</li>
+                <li class="green">Logical Operators</li>
+                <li class="green">Loops Introduction</li>
+                <li>For Loops</li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>For loops</h1>
+            <p>Your new best friend :)</p>
+        </section>
+
+        <section>
+            <h2>Intro to for loops</h2>
+            <ul>
+                <li class="fragment"><span style="color: aqua;">For loops</span> are the most popular type of loop in JavaScript.</li>
+                <li class="fragment">For loops are frequently used for actions that need to run a particular number of times.</li>
+                <li class="fragment">For loops are also a common way to work with <span style="color: aqua;">arrays</span>, which are lists of data.</li>
+                <li class="fragment">For loops frequently look through all of the items in an array one at a time.</li>
+                <li class="fragment">Examples: arrays of images, tasks, links, items, etc.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>For Loop Syntax, Part I</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>             
+for (let i = 0; i < 10; i++){
+  //....do something...
+}
+</code></pre>
+            <p>A <code class="aqua">for</code> loop has a <span class="yellow">declaration</span> of a variable that is a <span class="yellow">counter</span>.</p>
+            <p>We give the counter a value.</p>
+            <p>The counter tells the loop where it should start running.</p>
+            <p>Example: <code class="aqua">let i = 0;</code></p>
+            <aside class="notes">i's value is set to wherever we want the loop to start running.</aside>
+        </section>
+
+        <section>
+            <h2>For Loop Syntax, Part II</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>             
+for (let i = 0; i < 10; i++){
+  //....do something...
+}
+</code></pre>
+            <p>A <code class="aqua">for</code> loop also has a <span class="yellow">condition</span> that evaluate to <span class="aqua">true</span>.</p>
+            <p>The for loop only runs when the condition is <span class="aqua">true</span>.</p>
+            <p>The for loop stops running when the condition is <span class="aqua">false</span>.</p>
+            <p>Example: <code class="aqua">i < 10;</code></p>
+        </section>
+
+        <section>
+            <h2>For Loop Syntax, Part III</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>             
+for (let i = 0; i < 10; i++){
+  //....do something...
+}
+</code></pre>
+            <p>A <code class="aqua">for</code> loop also has a <span class="yellow">counter change</span>.</p>
+            <p>The change occurs as the loop runs.</p>
+            <p>This change helps the loop stop.</p>
+            <p>Example: <code class="aqua">i++;</code></p>
+        </section>
+
+        <!-- <section>
+            <h2>How do for loops work?</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>                                   
+for ([initialization]; [condition]; [incrementation]) {
+  //...do something...
+}
+</code></pre>
+            <p class="fragment">DECLARATION and INITIALIZATION is checked before the loop runs.</p>
+            <p class="fragment">The loop will only run if the CONDITION is evaluated to true.</p>
+            <p class="fragment">The INCREMENTATION is what is done to the counter after each time the code block runs.</p>
+            <p class="fragment">The code block (everything in the curly braces) is what runs each time the loop is activated.</p>
+        </section> -->
+
+        <section>
+            <h2>Counting from 0 to 10</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>             
+// start from 0
+// check if our count is 10 yet
+// if not count it (add one)  
+for (let i = 0; i <= 10 ; i++){
+    console.log(i);
+}
+</code></pre>
+            <aside class="notes">will log 11 times because of the <=</aside>
+        </section>
+
+        <section>
+            <h2>Count from 10 to 0</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>
+for (let i = 10; i >= 0 ; i--){
+	console.log(i);
+}
+</code></pre>
+            <aside class="notes">will log 11 times because of the >=</aside>
+        </section>
+
+        <!-- <section>
+            <h2> While Loop vs For loop</h2>
+            <p>While Loops</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>           
+var counter = 0;
+while (counter < 10) {
+    document.write(counter);
+    counter += 1;
+}
+</code></pre>
+            <p class="fragment">For loops</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>            
+for (let counter = 0; counter < 10; counter +=1) {
+    document.write(counter);
+}
+</code></pre>
+            <p class="fragment">Fewer lines of code!</p>
+        </section> -->
+
+        <section>
+            <h2>Quick challenge</h2>
+            <p>Create a for loop that logs the numbers 4 to 156 to the console.</p>
+            <p>To log a value to the console use the console.log( ) method.</p>
+            <aside class="notes">
+                for (let i = 4; i <= 156; i++) {
+                    console.log(i);
+                }
+            </aside>
+        </section>
+
+        <section>
+            <h2>Looping through an array</h2>
+            <ul>
+                <li>You can use a loop to go through each item of an array.</li>
+                <li>Remember: arrays use zero indexes to count each element that is stored inside of them.</li>
+            </ul>
+<pre class="fragment"><code class="js" data-trim contenteditable>       
+var favoriteColors = ["red", "blue", "purple", "yellow"];
+for (let i = 0; i < favoriteColors.length ; i++){
+    console.log("I really like the color: " + favoriteColors[i]);
+}
+</code></pre>
+            <p class="fragment">Explain this code:</p>
+<pre class="fragment"><code class="js" data-trim contenteditable>       
+var fruitSnacks = ["dried cranberries", "fresh blueberries", "apple crisps", "plantain chips"];
+for (let i = 0; i < fruitSnacks.length ; i++){
+    console.log("I need to stock up on: " + fruitSnacks[i]);
+}
+</code></pre>
+        </section>
+
+        <section>
+            <h2>The Recipe Card</h2>
+            <p>Create an object to hold information on your favorite recipe.</p>
+            <p>Your object should have these properties:</p>
+            <ul>
+                <li>title (a string)</li>
+                <li>servings (a number)</li>
+                <li>ingredients (an array of strings)</li>
+            </ul>
+            <p class="fragment">Then loop through each ingredient in the array to log to the console:</p>
+            <img class="fragment" src="images/recipe1.png" alt="Recipe Card"></br>
+            <div style="width:80%; position: absolute; bottom: 0px; right: 0px;">
+                <img style="float: right; width: 100px;" src="images/exercise.gif" alt="Exercise Time">
+                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Remainder Operator</h2>
+            <p>The <span class="yellow">remainder</span> operator can help us find out what something is divisible by.</p>
+            <p>The remainder is a term used in division.</p>
+            <p>Examples: <span class="aqua">4</span> divided by <span class="aqua">2</span> has a remainder of <span class="aqua">0</span>.<br><span class="aqua">4</span> divided by <span class="aqua">3</span> has a remainder of <span class="aqua">1</span>.</p>
+        </section>
+
+        <section>
+            <h2>Remainder Operator Syntax</h2>
+<pre class="fragment"><code class="js" data-trim contenteditable>       
+10 % 2 === 0 //this is true
+9 % 3 === 0 //this is true
+10 % 3 === 1 //this is true
+15 % 4 === 0 //this is false
+</code></pre>         
+        <p class="fragment">Remember, the remainder operator tells us if there is a remainder after the number on the left has been divided into by the number on the right.</p>
+        </section>
+
+        <section>
+            <h2>Remainder Exercise</h2>
+            <p>Find all of the even numbers from 0-100 and add them to an array called “even”.</p>
+            <p>Find all numbers divisible by 8 in the array called "<span class="aqua">even</span>" and add it to a different array called “<span class="aqua">myEights</span>”.</p>
+            <div style="width:80%;">
+                <img style="float: right; width: 300px;" src="images/exercise.gif" alt="Exercise Time">
+                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Favorite Foods Exercise</h2>
+            <ul>
+                <li>Create an array called <span class="aqua">favoriteFood</span> and add 6 items to the array.</li>
+                <li>Create a function called <span class="aqua">printFoods</span> that passes the argument of <span class="aqua">lists</span> through it.</li>
+                <li>Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.</li>
+                <li>Call the function with the favoriteFood array.</li>
+            </ul>
+            <div style="width:80%;">
+                <img style="float: right; width: 250px;" src="images/exercise.gif" alt="Exercise Time">
+                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
+            </div>
+        </section>
+
+         <section>
+            <h2>The Reading List</h2>
+            <p class="fragment">Create an array of objects, where each object describes a book and has 3 properties: title (a string), author (a string), alreadyRead (a boolean to note if you've read it yet).</p>
+            <p class="fragment">Iterate through the array of books. For each book, log the book title and its author like so: "The Hobbit by J.R.R. Tolkien".</p>
+            <p class="fragment">Now use an if/else statement to change the output depending on whether you've read it yet or not. If you've read it, log a string: 'You already read "The Hobbit" by J.R.R. Tolkien'; if not, log a string: 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'</p>
+            <div style="width:80%; position: absolute; bottom: -30px; right: 0;">
+                <img style="float: right; width: 100px;" src="images/exercise.gif" alt="Exercise Time">
+                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
+            </div>
+        </section>
+
+        <section>
+            <h2>in pictures</h2>
+            <img data-enlargable width="500" style="border: 5px solid blue; cursor: zoom-in;"  src="images/for-statement.png" alt="Control Flow" width="500px">
+            <p>This image visually depicts a for loop that has an if statement inside of its code block. When might we want to use that?</p>
         </section>
 
         <section>
@@ -1098,195 +1334,6 @@ document.write("&lt;p&gt;The random number was " + numberToGuess +
         </section>
 
         <section>
-            <h1>For loops</h1>
-            <p>Your new best friend :)</p>
-        </section>
-
-        <section>
-            <h2>Intro to for loops</h2>
-            <ul>
-                <li class="fragment"><span style="color: aqua;">For loops</span> are the most popular type of loop in JavaScript.</li>
-                <li class="fragment">For loops are frequently used for actions that need to run a particular number of times.</li>
-                <li class="fragment">For loops are also a common way to work with <span style="color: aqua;">arrays</span>, which are lists of data.</li>
-                <li class="fragment">For loops frequently look through all of the items in an array one at a time.</li>
-                <li class="fragment">Examples: arrays of images, tasks, links, items, etc.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>How do for loops work?</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>                                   
-for ([initialization]; [condition]; [incrementation]) {
- 	//...do something...
-}
-</code></pre>
-            <p class="fragment">DECLARATION and INITIALIZATION is checked before the loop runs.</p>
-            <p class="fragment">The loop will only run if the CONDITION is evaluated to true.</p>
-            <p class="fragment">The INCREMENTATION is what is done to the counter after each time the code block runs.</p>
-            <p class="fragment">The code block (everything in the curly braces) is what runs each time the loop is activated (just like <code style="color: aqua;">while</code> loops!).</p>
-        </section>
-
-        <section>
-            <h2>For loops</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>             
-for (var i = 0; i <= 10; i++){
-    //....do something...
-}
-</code></pre>
-            <p class="fragment">To simplify writing this code, we use a variable to represent counter each time we use a for loop. We just use the letter “i”!</p>
-            <p class="fragment">The letter “i” is a name we tyically give to a variable that is a number type that varies.</p>
-        </section>
-
-        <section>
-            <h2>Counting from 0 to 10</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>             
-// start from 0
-// check if our count is 10 yet
-// if not count it (add one)  
-for (var i = 0; i <= 10 ; i++){
-    console.log(i);
-}
-</code></pre>
-        </section>
-
-        <section>
-            <h2>Count from 10 to 0</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>
-for (var i = 10; i >= 0 ; i--){
-	console.log(i);
-}
-</code></pre>
-        </section>
-
-        <section>
-            <h2> While Loop vs For loop</h2>
-            <p>While Loops</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>           
-var counter = 0;
-while (counter < 10) {
-    document.write(counter);
-    counter += 1;
-}
-</code></pre>
-            <p class="fragment">For loops</p>
-<pre class="fragment"><code class="js" data-trim contenteditable>            
-for (var counter = 0; counter < 10; counter +=1) {
-    document.write(counter);
-}
-</code></pre>
-            <p class="fragment">Fewer lines of code!</p>
-        </section>
-
-        <section>
-            <h2>Quick challenge</h2>
-            <p>Create a for loop that logs the numbers 4 to 156 to the console.</p>
-            <p>To log a value to the console use the console.log( ) method.</p>
-            <aside class="notes">
-                for (var i = 4; i <= 156; i++) {
-                    console.log(i);
-                }
-            </aside>
-        </section>
-
-        <section>
-            <h2>Looping through an array</h2>
-            <ul>
-                <li>You can use a loop to go through each item of an array.</li>
-                <li>Remember: arrays use zero indexes to count each element that is stored inside of them.</li>
-            </ul>
-<pre class="fragment"><code class="js" data-trim contenteditable>       
-var favoriteColors = ["red", "blue", "purple", "yellow"];
-for (var i = 0; i < favoriteColors.length ; i++){
-    console.log("I really like the color: " + favoriteColors[i]);
-}
-</code></pre>
-<pre class="fragment"><code class="js" data-trim contenteditable>       
-var fruitSnacks = ["dried cranberries", "fresh blueberries", "apple crisps", "plantain chips"];
-for (var i = 0; i < fruitSnacks.length ; i++){
-    console.log("I need to stock up on: " + fruitSnacks[i]);
-}
-</code></pre>
-        </section>
-
-        <section>
-            <h2>The Recipe Card</h2>
-            <p>Create an object to hold information on your favorite recipe.</p>
-            <p>Your object should have these properties:</p>
-            <ul>
-                <li>title (a string)</li>
-                <li>servings (a number)</li>
-                <li>ingredients (an array of strings)</li>
-            </ul>
-            <p class="fragment">On separate lines (one console.log statement for each), log the recipe information so it looks like: </p>
-            <img class="fragment" src="images/recipe1.png" alt="Recipe Card"></br>
-            <div style="width:80%; position: absolute; bottom: 0px; right: 0px;">
-                <img style="float: right; width: 100px;" src="images/exercise.gif" alt="Exercise Time">
-                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Modulus Operator</h2>
-            <p>An additional math operator in JavaScript called the <span style="color: yellow;">modulus</span>.</p>
-            <p>It is noted by the "%" sign, and helps us find the remainder.</p>
-            <p>The remainder is a term used in division. Example: 4 divided by 2 has a remainder of 0. 4 divided by 3 has a remainder of 1.</p>
-            <p>Modulus can help us find out what something is divisible by.</p>
-            <p>Examples of the use of modulus on the next slide.</p>
-        </section>
-
-        <section>
-            <h2>Modulus Examples</h2>
-<pre class="fragment"><code class="js" data-trim contenteditable>       
-10 % 2 === 0 //this is true
-9 % 3 === 0 //this is true
-10 % 3 === 1 //this is true
-15 % 4 === 0 //this is false
-</code></pre>         
-        <p class="fragment">Remember, the modulus tells us if there is a remainder after the number on the left has been divided into by the number on the right.</p>
-        </section>
-
-        <section>
-            <h2>Modulus Exercise for Arrays and Loops</h2>
-            <p>Find all of the even numbers from 0-100 and add them to an array called “even”.</p>
-            <p>Find all the numbers divisible by 8 in "even" and add it to a different array called “myEights”.</p>
-            <div style="width:80%;">
-                <img style="float: right; width: 300px;" src="images/exercise.gif" alt="Exercise Time">
-                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Arrays and Loops</h2>
-            <ul>
-                <li>Create an array called <span class="aqua">favoriteFood</span> and add 6 items to the array.</li>
-                <li>Create a function called <span class="aqua">printFoods</span> that passes the argument of <span class="aqua">lists</span> through it.</li>
-                <li>Within the function, create a for loop that writes to the document “My number [ ] favorite food is [ ]” for each item in the array.</li>
-                <li>Call the function with the favoriteFood array.</li>
-            </ul>
-            <div style="width:80%;">
-                <img style="float: right; width: 250px;" src="images/exercise.gif" alt="Exercise Time">
-                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
-            </div>
-        </section>
-
-         <section>
-            <h2>The Reading List</h2>
-            <p class="fragment">Create an array of objects, where each object describes a book and has 3 properties: title (a string), author (a string), alreadyRead (a boolean to note if you've read it yet).</p>
-            <p class="fragment">Iterate through the array of books. For each book, log the book title and its author like so: "The Hobbit by J.R.R. Tolkien".</p>
-            <p class="fragment">Now use an if/else statement to change the output depending on whether you've read it yet or not. If you've read it, log a string: 'You already read "The Hobbit" by J.R.R. Tolkien'; if not, log a string: 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'</p>
-            <div style="width:80%; position: absolute; bottom: -30px; right: 0;">
-                <img style="float: right; width: 100px;" src="images/exercise.gif" alt="Exercise Time">
-                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
-            </div>
-        </section>
-
-        <section>
-            <h2>in pictures</h2>
-            <img data-enlargable width="500" style="border: 5px solid blue; cursor: zoom-in;"  src="images/for-statement.png" alt="Control Flow" width="500px">
-            <p>This image visually depicts a for loop that has an if statement inside of its code block. When might we want to use that?</p>
-        </section>
-
-        <section>
             <h2>If/else statements in a for loop</h2>
             <p>Dinner Example: At 1 PM, a caregiver receives a text: "If I am not home by 7 PM, make dinner."</p>
             <p class="fragment">Is there a variable? What changes?</p> 
@@ -1296,7 +1343,7 @@ var time = 1;
 </code></pre> 
             <p class="fragment">How would we write the for loop?</p>
 <pre class="fragment"><code class="js" data-trim contenteditable>
-for (var i = 1; i < 7; i++) {
+for (let i = 1; i < 7; i++) {
     if (i < 7) {
         console.log("I'll be home to make dinner.")
     } else {
@@ -1316,7 +1363,7 @@ var seats = 4;
 </code></pre> 
             <p class="fragment">How would we write the for loop?</p>
 <pre class="fragment"><code class="js" data-trim contenteditable>
-for (var i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {
     seats--;
     if ( seats !== 0) {
         console.log("This seat is taken. There are " + seats + " seats left.");
@@ -1337,7 +1384,7 @@ var yards = [40, 80, 90];
             <p class="fragment">How do we plant the trees? How do we write the for loop?</p>
 <pre class="fragment"><code class="js" data-trim contenteditable>
 function plantTrees(arr) {
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         if ( yards[i] > 0 ) {
             var wallSpace = arr[i] - 10
             var numTrees = wallSpace / 10
@@ -1399,7 +1446,7 @@ printMovie(titanic);
         <section>
             <h2>How do for in loops work?</h2>
 <pre class="fragment"><code class="js" data-trim contenteditable>                                   
-for (var [property] in [object]) {
+for (let [property] in [object]) {
  	//...do something...
 }
 </code></pre>
@@ -1474,7 +1521,7 @@ hair();
                 <p>We can loop through all of an object’s keys and values by using a <code style="color: aqua;">for in</code> loop, which is specific to objects. </p>
                 <p class="fragment">We can create a variable “key” that is used to represent the name of each key in the superman object in the for in loop.</p>
     <pre class="fragment"><code class="js" data-trim contenteditable>                                   
-for (var key in superman) {
+for (let key in superman) {
     console.log(key + “: ” + superman[key]); 
 }
     </code></pre>
@@ -1499,7 +1546,7 @@ var acClass = {
                 <p class="fragment">Find all of the pink values and return an array of the names with pink value.</p>
                 <aside class="notes">
 var pinkNames = [];
-for (var key in acClass) {
+for (let key in acClass) {
     if (acClass[key] === "pink"){
     pinkNames.push(key);
     }
@@ -1535,7 +1582,7 @@ var summit = {
 <a href="https://jsbin.com/bepodoz/edit?js,console" target="_blank">JS Bin solution with Extensions</a>
 var webUsers = [];
 var count = 0;
-for (var key in summit) {
+for (let key in summit) {
     count++;
     if (summit[key] === "web" || summit[key] === "phone or web" ) {
     webUsers.push(key)
@@ -1569,7 +1616,7 @@ var remedy = {
 <a href="https://jsbin.com/wapodeg/edit?js,console" target="blank">JS Bin solution with Extensions</a>
 time = parseInt(prompt("What time is it? Whole numbers, military time please."));
 var time = parseInt(prompt("what time is it?"));
-for (var key in remedy) {
+for (let key in remedy) {
   if (time < 12 && time >= 7 && key === "tincture") {
     alert("Time for your " + key + " of " + remedy[key].herbs);
   } else if (time === 12){
@@ -1596,7 +1643,7 @@ for (var key in remedy) {
     </code></pre> 
     <p class="fragment">How would the teacher create printed labels for each key?</p>
     <pre class="fragment"><code class="js" data-trim contenteditable> 
-for (var key in newStudent) {
+for (let key in newStudent) {
     if ( key === "name" || key === "doubleHook") {
         console.log(key + ": " + newStudent[key])
     } else if ( key === "backpack") {
@@ -1609,7 +1656,7 @@ for (var key in newStudent) {
                 <aside class="notes">
 <a href="https://jsbin.com/loronev/edit?js,console" target="_blank">JS Bin Solution with Extensions</a>
 //simple statement that actually needs no if condition
-for (var key in newStudent) {
+for (let key in newStudent) {
     if (newStudent.name === "Angelique") {
         var sentence = "I am purchasing a " + newStudent.doubleHook + " double hook and a basket for " + newStudent.name + "'s " + newStudent.backpack.color + " backpack."
     }
