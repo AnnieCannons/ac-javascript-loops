@@ -352,7 +352,7 @@ var myAge = 28;
   <tr><td>==    <td>Equality <td><code>myAge == 28</code> <br> <code>myAge == '28'</code> <br> <code>28 == '28'</code>
   <tr><td>===  <td>Strict equality <td><code>myAge === 28</code>     
   <tr><td>!=     <td>Inequality <td><code>myAge != 29</code>      
-  <tr><td>!==   <td>Strict inequality <td><code>myAge != '28'</code> <br> <code>28 != '28'</code>
+  <tr><td>!==   <td>Strict inequality <td><code>myAge !== '28'</code> <br> <code>28 !== '28'</code>
   <tr><td>&gt;  <td>Greater than <td><code>myAge &gt; 25</code> <br> <code>'28' &gt; 25</code>   
   <tr><td>&gt;=<td>Greater than or equal <td><code>myAge &gt;= 28</code> <br> <code>'28' &gt;= 25</code>
   <tr><td>&lt;   <td>Less than <td><code>myAge &lt; 30</code>  <br> <code>'28' &lt; 30</code>
@@ -614,7 +614,7 @@ if ( savings > 500 ) {
 <pre><code class="js" data-trim contenteditable>  
 var cupcakesSold = Number(prompt("How many cupcakes were sold today?"));   
 var profitMargin = 30;
-if (cupcakesSold < profitMargin ) {
+if ( cupcakesSold < profitMargin ) {
   alert("Gotta sell more!");
 }
 else if (cupcakesSold == profitMargin) {
@@ -634,8 +634,8 @@ var wholesalePrice = 5.45;
 var retailPrice = 9.99;
 var quantity = 47;
 var salesTotal = retailPrice * quantity;
-var profit = salesTotal-(wholesalePrice * quantity);
-if (profit > 400 ) {
+var profit = salesTotal - (wholesalePrice * quantity);
+if ( profit > 400 ) {
   console.log("Time to go home");
 }
 else {
@@ -670,7 +670,7 @@ var negNum = -2;
     <p>When combining together multiple conditions, use parantheses to group:</p>
 <pre><code class="js" data-trim contenteditable> 
 var myAge = 28;
-if ((myAge &gt;= 0 && myAge &lt; 3)  || myAge &gt; 90) {
+if ((myAge &gt;= 0 && myAge &lt; 3) || myAge &gt; 90) {
   console.log("You are either under 3 or over 90.");
 }
 </pre></code>
@@ -970,7 +970,7 @@ while (counter < 10) {
 
         <section>
             <h2>Loops</h2>
-            <p>What’s the difference between a while loop and a conditional statement?</p>
+            <p>What’s the difference between a loop and a conditional statement?</p>
             <p class="fragment">IF music plays, I will do a dance. AND <br> WHILE music is playing, I will continue dancing.</p>
             <img class="fragment" src="https://media.tenor.co/images/a6392f519c8e01fa9c44fe25b171038e/raw" alt="">
         </section>
@@ -1075,7 +1075,7 @@ document.write("&lt;p&gt;The random number was " + numberToGuess +
             <ul>
                 <li class="green">Understanding Control Flow</li>
                 <li class="green">Conditional Statement Syntax</li>
-                <li>Equivalency Operators</li>
+                <li class="green">Equivalency Operators</li>
                 <li class="green">Logical Operators</li>
                 <li class="green">Loops Introduction</li>
                 <li>For Loops</li>
@@ -1333,7 +1333,8 @@ for (let i = 0; i < fruitSnacks.length ; i++){
             </aside>
         </section>
 
-        <section>
+        <!-- cutting these examples because the most important takeaway is looping through examples that have collections (arrays of objects)  
+            <section>
             <h2>If/else statements in a for loop</h2>
             <p>Dinner Example: At 1 PM, a caregiver receives a text: "If I am not home by 7 PM, make dinner."</p>
             <p class="fragment">Is there a variable? What changes?</p> 
@@ -1351,7 +1352,7 @@ for (let i = 1; i < 7; i++) {
     }
 }
 </code></pre> 
-        </section>
+        </section> 
 
         <section>
             <h2>If/else statements in a for loop</h2>
@@ -1395,12 +1396,14 @@ function plantTrees(arr) {
     }
 }
 </code></pre> 
-        </section>
+        </section> 
 
         <section>
             <h2>The Movie Database</h2>
             <p class="fragment">Create an object to store the following information about your favorite movie: title (a string), duration (a number), and stars (an array of strings).</p>
             <p class="fragment">Create a function to print out the movie information like so: "Puff the Magic Dragon lasts for 30 minutes. Stars: Puff, Jackie, Living Sneezes."</p>
+            <p>Reference this <a href="https://jsbin.com/yewejes/edit?js,console" target="_blank">collection</a> of movies.</p>
+            <p>Create a loop that checks the duration of each movie object and logs to the console the titles of the movies that are longer than 150 minutes.</p>
             <div style="width:80%;">
                 <img style="float: right; width: 300px;" src="images/exercise.gif" alt="Exercise Time">
                 <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
@@ -1425,36 +1428,47 @@ function printMovie(movieObject){
 printMovie(interstellar);
 printMovie(titanic);       
             </aside>
+        </section> -->
+
+        <section>
+            <h2>The Movie Database</h2>
+             <p>Reference this <a href="https://jsbin.com/yewejes/edit?js,console" target="_blank">collection</a> of movies.</p>
+            <p>Create a loop that checks the duration of each movie object and logs to the console the titles of the movies that are longer than 150 minutes.</p>
+            <div style="width:80%;">
+                <img style="float: right; width: 300px;" src="images/exercise.gif" alt="Exercise Time">
+                <a href="https://trello.com/b/RQrD5Ye2" target="_blank" style="float: right;"><img  src="images/trello-logo-blue.png" alt="Trello Logo" width="200px"></a>
+            </div>
+            <aside class="notes">
         </section>
 
         <section>
             <h2>Intro to For In Loops</h2>
             <ul>
-                <li class="fragment"><span style="color: aqua;">For in loops</span> are another way to loop in JavaScript.</li>
-                <li class="fragment">For in loops are frequently used for actions that need to run a particular number of times.</li>
-                <li class="fragment">For loops are also a common way to work with <span style="color: aqua;">objects</span>, which has data made up of properties and methods.</li>
-                <li class="fragment">For in loops frequently look through an object's keys to get its values.</li>
+                <li class="fragment"><span class="yellow">For in loops</span> are another way to loop in JavaScript.</li>
+                <!-- <li class="fragment">For in loops are frequently used for actions that need to run a particular number of times.</li> -->
+                <li class="fragment">For in loops are only used with <span style="color: aqua;">objects</span> to commonly search for a particular key.</li>
+                <!-- <li class="fragment">For in loops frequently look through an object's keys to get its values.</li> -->
             </ul>
-            <h3 class="fragment">Examples:</h3>
+            <!-- <h3 class="fragment">Examples:</h3>
             <ul>
                 <li class="fragment">Recipe: recipeName, numServings, chefContributor, etc.</li>
                 <li class="fragment">Book: bookTitle, author, illustrator, numPages, etc.</li>
                 <li class="fragment">Vacation: startDate, endDate, departingFlight, returnFlight, carRental, roomRental, etc.</li>
-            </ul>
+            </ul> -->
         </section>
 
         <section>
             <h2>How do for in loops work?</h2>
 <pre class="fragment"><code class="js" data-trim contenteditable>                                   
-for (let [property] in [object]) {
+for (let [key] in [object]) {
  	//...do something...
 }
 </code></pre>
-            <p class="fragment">For in loops loop through an object's properties/keys.</p>
-            <p class="fragment">PROPERTY is often "key" because we want the for in loop to loop through the object's keys.</p>
-            <p class="fragment">The OBJECT is the name of the object that we want to loop through.</p>
-            <p class="fragment">Note the built-in stopping point for the for in loop: it will stop when there are no more keys in that object to loop through.</p>
-            <p class="fragment">The code block (everything in the curly braces) is what runs each time the loop is activated (just like <code style="color: aqua;">for</code> loops!).</p>
+            <!-- <p class="fragment">For in loops loop through an object's properties/keys.</p>
+            <p class="fragment">PROPERTY is often "key" because we want the for in loop to loop through the object's keys.</p> -->
+            <p class="fragment">The <span class="aqua">object</span> is the name of the object that we want to loop through.</p>
+            <p class="fragment">Note the built-in stopping point for the <span class="yellow">for in loop</span>: it will stop when there are no more keys in that object to loop through.</p>
+            <!-- <p class="fragment">The code block (everything in the curly braces) is what runs each time the loop is activated (just like <code style="color: aqua;">for</code> loops!).</p> -->
         </section>
 
         <section>
@@ -1462,12 +1476,12 @@ for (let [property] in [object]) {
                 <ul>
                     <li class="fragment">An object in JavaScript is a self-contained set of related values and functions.</li>
                     <li class="fragment">It is a great way to keep data and functions about one item (or object) together.</li>
-                    <li class="fragment">An object literal is an object that is created directly in the language by wrapping all of its properties and methods in curly braces. (It’s the one we learned. The other type of object is object constructor— don’t worry about that now!)</li>
+                    <li class="fragment">An object literal is an object that is created directly in the language by wrapping all of its properties and methods in curly braces.</li>
                     <li class="fragment">Objects contain key/value pairs. </li>
                 </ul>
             </section>
 
-            <section>
+            <!-- <section>
                 <h2>Objects Syntax Review</h2>
                 <ul>
                     <li class="fragment">How do you declare an object?</li>
@@ -1481,7 +1495,7 @@ for (let [property] in [object]) {
 
                 </code></pre>
             </section>
-    
+     -->
             <section>
                 <h2>Example of Object Literal</h2>
     <pre class="fragment"><code class="js" data-trim contenteditable>             
@@ -1558,7 +1572,7 @@ console.log(pinkNames);
 
             <section>
                 <h2>If/else statements in a for in loop</h2>
-                <p>A summit CFO needs attendees' tech preferences to inform financing of a web-only plan or a phone-or-web flex plan. If over 80% of the attendees have web OR phone-or-web preferences, you will invest in the web-only plan.</p>
+                <!-- <p>A summit CFO needs attendees' tech preferences to inform financing of a web-only plan or a phone-or-web flex plan. If over 80% of the attendees have web OR phone-or-web preferences, you will invest in the web-only plan.</p> -->
 <pre class="fragment" style="width: 40%; float: left;"><code class="js" data-trim contenteditable>      
 var summit = { 
     abbi: "phone",
@@ -1577,7 +1591,8 @@ var summit = {
     nigel: "web"
 }
 </code></pre>
-                <p class="fragment" style="width: 60%; float: left;">Find all web values AND phone-or-web values; </span><span class="fragment">store their users in an array. </span><span class="fragment">Count the number of times your for in loop executes. </span><span class="fragment">Divide the length of the array with the loop count to get percentage. </span><span class="fragment">If percentage is 80%+, tell CFO to invest in the web-only plan.</span></p>
+                <p class="fragment" style="width: 60%; float: left;">Find all summit attendees who have indicated "web" as their plan, and push each of their names into an array.</p>
+                <!-- <p class="fragment" style="width: 60%; float: left;">Find all web values AND phone-or-web values; </span><span class="fragment">store their users in an array. </span><span class="fragment">Count the number of times your for in loop executes. </span><span class="fragment">Divide the length of the array with the loop count to get percentage. </span><span class="fragment">If percentage is 80%+, tell CFO to invest in the web-only plan.</span></p> -->
                 <aside class="notes">
 <a href="https://jsbin.com/bepodoz/edit?js,console" target="_blank">JS Bin solution with Extensions</a>
 var webUsers = [];
@@ -1592,7 +1607,7 @@ console.log(webUsers.length / count);
                 </aside>
             </section>
 
-            <section>
+            <!-- <section>
                 <h2>If/else statements in a for in loop</h2>
                 <p>Your herbal treatment plan has 1 bottle and 1 loose leaf tea:</p>
 <pre class="fragment"><code class="js" data-trim contenteditable>      
@@ -1611,7 +1626,7 @@ var remedy = {
     }
 }
 </code></pre>
-                <p class="fragment">You prefer doses of tincture at mealtimes and tea at lunchtime. Write a for in loop with if/else statements that alerts you: "Time to take your tincture of [herbs]" or "Time to take your tincture of [tincture herbs] and cup of [tea herbs]"</p>
+                <p class="fragment">You prefer doses of tincture at mealtimes and tea at lunchtime. Write a for in loop with if/else statements that alerts you: "Time to take your [dosage] of [herbs]" or "Time to take your tincture of [tincture herbs] and cup of [tea herbs]"</p>
                 <aside class="notes">
 <a href="https://jsbin.com/wapodeg/edit?js,console" target="blank">JS Bin solution with Extensions</a>
 time = parseInt(prompt("What time is it? Whole numbers, military time please."));
@@ -1641,7 +1656,7 @@ for (let key in remedy) {
         basket: [ "books", "homework", "miscellaneous"],
     };
     </code></pre> 
-    <p class="fragment">How would the teacher create printed labels for each key?</p>
+    <p class="fragment">How would you set up a for in loop to print labels for each student's things?</p>
     <pre class="fragment"><code class="js" data-trim contenteditable> 
 for (let key in newStudent) {
     if ( key === "name" || key === "doubleHook") {
@@ -1663,12 +1678,24 @@ for (let key in newStudent) {
 }
 console.log(sentence);
                 </aside>
-            </section>
+            </section> 
 
             <section>
                 <h2>Introduction to JS Conditions and Loops Roundup</h2>
                 <p>Click <a href="https://docs.google.com/document/d/1aP70ATkxLXNHKn-TOFDcbCHUgz5sfH59eDYT6Fqautw/edit?usp=sharing" target="_blank">here</a></p>
-            </section>
+            </section> -->
+
+        <section>
+            <h2>Conditional Statements and Loops Overview</h2>
+            <ul>
+                <li class="green">Understanding Control Flow</li>
+                <li class="green">Conditional Statement Syntax</li>
+                <li class="green">Equivalency Operators</li>
+                <li class="green">Logical Operators</li>
+                 <li class="green">Loops Introduction</li>
+                <li class="green">For Loops</li>
+            </ul>
+        </section>
 
         <section>
             <h1>The End</h1>
